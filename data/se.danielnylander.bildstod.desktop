@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=ULVisual schedule and picture support tool
+Comment=Visual schedule and picture support tool
+Exec=bildstod
+Icon=se.danielnylander.bildstod
+Categories=Utility;
