@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) YEAR Daniel Nylander
 # This file is distributed under the same license as the bildstod package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -7,15 +7,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 09:58+0100\n"
+"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
+"POT-Creation-Date: 2026-02-17 17:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/bildstod/main.py:23 src/bildstod/main.py:41
+msgid "Bildstöd"
+msgstr ""
 
 #: src/bildstod/main.py:34 src/bildstod/main.py:143
 msgid "Ready"
