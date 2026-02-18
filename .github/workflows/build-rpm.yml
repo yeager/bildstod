@@ -37,7 +37,7 @@ jobs:
           Name:           bildstod
           Version:        VERSION_PLACEHOLDER
           Release:        1
-          Summary:        
+          Summary:        Visual schedule and picture support tool
           License:        GPL-3.0-or-later
           URL:            https://github.com/yeager/bildstod
           Source0:        %{name}-%{version}.tar.gz
