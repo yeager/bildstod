@@ -206,12 +206,14 @@ class MainWindow(Adw.ApplicationWindow):
         about.set_application_name(_("Bildstöd"))
         about.set_application_icon("se.danielnylander.bildstod")
         about.set_developer_name("Daniel Nylander")
+        about.set_developers(["Daniel Nylander <daniel@danielnylander.se>"])
         about.set_version(__version__)
         about.set_website("https://github.com/yeager/bildstod")
+        about.set_issue_url("https://github.com/yeager/bildstod/issues")
         about.set_comments(
             _("Visual schedule and picture support tool for children with autism and language disorders.")
         )
-        about.set_translator_credits(_("translator-credits"))
+        about.set_translator_credits(_("Translate this app: https://www.transifex.com/danielnylander/bildstod/"))
         about.set_license_type(Gtk.License.GPL_3_0)
         about.present(self)
 
