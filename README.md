@@ -1,5 +1,7 @@
 # ULVisual schedule and picture support tool
 
+[![Version](https://img.shields.io/badge/version-0.2.0-blue)](https://github.com/yeager/bildstod/releases)
+
 ## Screenshot
 
 ![Bildstöd](screenshots/main.png)
