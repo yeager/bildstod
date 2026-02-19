@@ -14,61 +14,68 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install RPM tools
-        run: sudo apt-get update && sudo apt-get install -y rpm
+      - name: Install tools
+        run: sudo apt-get update && sudo apt-get install -y rpm gettext
 
       - name: Get version
         id: version
         run: echo "version=$(grep -oP '__version__ = \"\K[^\"]+' src/bildstod/__init__.py)" >> $GITHUB_OUTPUT
 
-      - name: Setup RPM build
+      - name: Compile translations
         run: |
-          mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
-          VERSION=${{ steps.version.outputs.version }}
-          DIR=bildstod-$VERSION
-          mkdir -p $DIR
-          cp -r src/ data/ LICENSE README.md pyproject.toml $DIR/ 2>/dev/null || true
-          tar czf ~/rpmbuild/SOURCES/$DIR.tar.gz $DIR
+          for po in po/*.po; do
+            [ -f "$po" ] || continue
+            lang=$(basename "$po" .po)
+            mkdir -p src/bildstod/locale/$lang/LC_MESSAGES
+            msgfmt -o src/bildstod/locale/$lang/LC_MESSAGES/bildstod.mo "$po"
+          done
 
-      - name: Create spec and build
+      - name: Build RPM
         run: |
-          VERSION=${{ steps.version.outputs.version }}
-          cat > ~/rpmbuild/SPECS/bildstod.spec << 'SPEC'
+          VER=${{ steps.version.outputs.version }}
+          mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+
+          PKG=bildstod-$VER
+          mkdir -p $PKG
+          cp -r src/ data/ LICENSE README.md pyproject.toml $PKG/ 2>/dev/null || true
+          tar czf ~/rpmbuild/SOURCES/$PKG.tar.gz $PKG
+
+          cat > ~/rpmbuild/SPECS/bildstod.spec << SPECEOF
           Name:           bildstod
-          Version:        VERSION_PLACEHOLDER
+          Version:        $VER
           Release:        1
           Summary:        Visual schedule and picture support tool
           License:        GPL-3.0-or-later
           URL:            https://github.com/yeager/bildstod
-          Source0:        %{name}-%{version}.tar.gz
+          Source0:        bildstod-$VER.tar.gz
           BuildArch:      noarch
           Requires:       python3-gobject gtk4 libadwaita
 
           %description
-          GTK4/Libadwaita application.
+          Visual schedule and picture support tool
 
           %prep
           %setup -q
 
           %install
-          mkdir -p %{buildroot}/usr/share/bildstod/bildstod
-          cp src/bildstod/*.py %{buildroot}/usr/share/bildstod/bildstod/
+          mkdir -p \$RPM_BUILD_ROOT/usr/share/bildstod/bildstod
+          cp src/bildstod/*.py \$RPM_BUILD_ROOT/usr/share/bildstod/bildstod/
           if [ -d src/bildstod/locale ]; then
-            cp -r src/bildstod/locale %{buildroot}/usr/share/bildstod/bildstod/
+            cp -r src/bildstod/locale \$RPM_BUILD_ROOT/usr/share/bildstod/bildstod/
           fi
 
-          mkdir -p %{buildroot}/usr/bin
-          cat > %{buildroot}/usr/bin/bildstod << 'LAUNCHER'
+          mkdir -p \$RPM_BUILD_ROOT/usr/bin
+          cat > \$RPM_BUILD_ROOT/usr/bin/bildstod << 'LAUNCHER'
           #!/bin/bash
-          exec python3 -c "import sys; sys.path.insert(0, '/usr/share/bildstod'); from bildstod.main import main; main()" "$@"
+          exec python3 -c "import sys; sys.path.insert(0, '/usr/share/bildstod'); from bildstod.main import main; main()" "\$@"
           LAUNCHER
-          chmod 755 %{buildroot}/usr/bin/bildstod
+          chmod 755 \$RPM_BUILD_ROOT/usr/bin/bildstod
 
-          mkdir -p %{buildroot}/usr/share/applications
-          cp data/*.desktop %{buildroot}/usr/share/applications/ 2>/dev/null || true
+          mkdir -p \$RPM_BUILD_ROOT/usr/share/applications
+          cp data/*.desktop \$RPM_BUILD_ROOT/usr/share/applications/ 2>/dev/null || true
 
-          mkdir -p %{buildroot}/usr/share/icons/hicolor/scalable/apps
-          cp data/icons/*.svg %{buildroot}/usr/share/icons/hicolor/scalable/apps/ 2>/dev/null || true
+          mkdir -p \$RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps
+          cp data/icons/*.svg \$RPM_BUILD_ROOT/usr/share/icons/hicolor/scalable/apps/ 2>/dev/null || true
 
           %files
           %license LICENSE
@@ -77,9 +84,13 @@ jobs:
           /usr/share/bildstod/
           /usr/share/applications/*.desktop
           /usr/share/icons/hicolor/scalable/apps/*.svg
-          SPEC
-          sed -i "s/VERSION_PLACEHOLDER/$VERSION/g" ~/rpmbuild/SPECS/bildstod.spec
-          sed -i "s|\${repo}|bildstod|g; s|\${PYNAME}|bildstod|g" ~/rpmbuild/SPECS/bildstod.spec
+
+          %changelog
+          * $(date "+%a %b %d %Y") Daniel Nylander <daniel@danielnylander.se> - $VER-1
+          - RPM build
+          SPECEOF
+
+          sed -i 's/^          //' ~/rpmbuild/SPECS/bildstod.spec
           rpmbuild -ba ~/rpmbuild/SPECS/bildstod.spec
 
       - name: Upload RPM to release
@@ -87,7 +98,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION=${{ steps.version.outputs.version }}
-          gh release upload "v$VERSION" \
-            ~/rpmbuild/RPMS/noarch/bildstod-${VERSION}-1.noarch.rpm \
-            --clobber
+          VER=${{ steps.version.outputs.version }}
+          RPM=$(find ~/rpmbuild/RPMS -name "*.rpm" | head -1)
+          [ -f "$RPM" ] && gh release upload "v$VER" "$RPM" --clobber || echo "No RPM found"
