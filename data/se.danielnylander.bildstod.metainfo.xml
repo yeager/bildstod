@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>se.danielnylander.bildstod</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Bildstöd</name>
+  <summary>ARASAAC pictogram search and visual communication tool</summary>
+  <description>
+    <p>
+      Bildstöd helps create visual communication boards using ARASAAC pictograms.
+      Search over 13,000 free pictograms, create picture schedules, and export
+      boards for printing. Designed for children and adults who use AAC
+      (Augmentative and Alternative Communication).
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Search 13,000+ ARASAAC pictograms</li>
+      <li>Create visual communication boards</li>
+      <li>Drag and drop pictograms</li>
+      <li>Export boards as images or PDF</li>
+      <li>Dark/light theme support</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/yeager/bildstod</url>
+  <url type="bugtracker">https://github.com/yeager/bildstod/issues</url>
+  <developer id="se.danielnylander">
+    <name>Daniel Nylander</name>
+  </developer>
+  <launchable type="desktop-id">se.danielnylander.bildstod.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Bildstöd showing ARASAAC pictogram search results</caption>
+      <image>https://raw.githubusercontent.com/yeager/bildstod/main/screenshots/main.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="0.3.0" date="2026-02-20">
+      <description>
+        <p>Added ARASAAC pictogram search with 13,000+ free pictograms.</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1"/>
+  <categories>
+    <category>Utility</category>
+    <category>Accessibility</category>
+  </categories>
+  <keywords>
+    <keyword>aac</keyword>
+    <keyword>pictogram</keyword>
+    <keyword>arasaac</keyword>
+    <keyword>communication</keyword>
+    <keyword>accessibility</keyword>
+    <keyword>autism</keyword>
+  </keywords>
+</component>
