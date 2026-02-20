@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 21:04+0100\n"
+"POT-Creation-Date: 2026-02-20 21:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -386,7 +386,7 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: src/bildstod/main.py:64 src/bildstod/main.py:404
+#: src/bildstod/main.py:64 src/bildstod/main.py:410
 msgid "Preferences"
 msgstr ""
 
@@ -414,7 +414,7 @@ msgstr ""
 msgid "ARASAAC"
 msgstr ""
 
-#: src/bildstod/main.py:108 src/bildstod/main.py:529
+#: src/bildstod/main.py:108 src/bildstod/main.py:565
 msgid "Ready"
 msgstr ""
 
@@ -485,15 +485,15 @@ msgstr ""
 msgid "Autismappar"
 msgstr ""
 
-#: src/bildstod/main.py:366
+#: src/bildstod/main.py:372
 msgid "Welcome"
 msgstr ""
 
-#: src/bildstod/main.py:372
+#: src/bildstod/main.py:378
 msgid "Welcome to Bildstöd"
 msgstr ""
 
-#: src/bildstod/main.py:374
+#: src/bildstod/main.py:380
 msgid ""
 "Picture-based communication and scheduling.\n"
 "\n"
@@ -503,103 +503,135 @@ msgid ""
 "✓ Export and share schedules"
 msgstr ""
 
-#: src/bildstod/main.py:381
+#: src/bildstod/main.py:387
 msgid "Get Started"
 msgstr ""
 
-#: src/bildstod/main.py:407
+#: src/bildstod/main.py:413
 msgid "General"
 msgstr ""
 
-#: src/bildstod/main.py:411
+#: src/bildstod/main.py:417
 msgid "Appearance"
 msgstr ""
 
-#: src/bildstod/main.py:414
+#: src/bildstod/main.py:420
 msgid "Theme"
 msgstr ""
 
-#: src/bildstod/main.py:415
+#: src/bildstod/main.py:421
 msgid "Choose light, dark, or follow system"
 msgstr ""
 
-#: src/bildstod/main.py:417
+#: src/bildstod/main.py:423
 msgid "System"
 msgstr ""
 
-#: src/bildstod/main.py:417
+#: src/bildstod/main.py:423
 msgid "Light"
 msgstr ""
 
-#: src/bildstod/main.py:417
+#: src/bildstod/main.py:423
 msgid "Dark"
 msgstr ""
 
-#: src/bildstod/main.py:425
+#: src/bildstod/main.py:431
 msgid "Icon Size"
 msgstr ""
 
-#: src/bildstod/main.py:426
+#: src/bildstod/main.py:432
 msgid "Size of pictogram icons"
 msgstr ""
 
-#: src/bildstod/main.py:428
+#: src/bildstod/main.py:434
 msgid "Small"
 msgstr ""
 
-#: src/bildstod/main.py:428
+#: src/bildstod/main.py:434
 msgid "Medium"
 msgstr ""
 
-#: src/bildstod/main.py:428
+#: src/bildstod/main.py:434
 msgid "Large"
 msgstr ""
 
-#: src/bildstod/main.py:439
-msgid "Advanced"
-msgstr ""
-
-#: src/bildstod/main.py:443
-msgid "ARASAAC Cache"
+#: src/bildstod/main.py:445
+msgid "Speech"
 msgstr ""
 
 #: src/bildstod/main.py:448
-msgid "Cached pictograms"
+msgid "Speech Engine"
 msgstr ""
 
-#: src/bildstod/main.py:450
-msgid "Clear"
+#: src/bildstod/main.py:449
+msgid "Piper gives natural voices, espeak is robotic but lightweight"
+msgstr ""
+
+#: src/bildstod/main.py:451
+msgid "Automatic"
+msgstr ""
+
+#: src/bildstod/main.py:451
+msgid "Piper (natural)"
+msgstr ""
+
+#: src/bildstod/main.py:451
+msgid "espeak-ng (robotic)"
 msgstr ""
 
 #: src/bildstod/main.py:459
+msgid "Speech Speed"
+msgstr ""
+
+#: src/bildstod/main.py:460
+msgid "Slower speech can be easier to understand"
+msgstr ""
+
+#: src/bildstod/main.py:475
+msgid "Advanced"
+msgstr ""
+
+#: src/bildstod/main.py:479
+msgid "ARASAAC Cache"
+msgstr ""
+
+#: src/bildstod/main.py:484
+msgid "Cached pictograms"
+msgstr ""
+
+#: src/bildstod/main.py:486
+msgid "Clear"
+msgstr ""
+
+#: src/bildstod/main.py:495
 msgid "Notifications"
 msgstr ""
 
-#: src/bildstod/main.py:461
+#: src/bildstod/main.py:497
 msgid "Activity reminders"
 msgstr ""
 
-#: src/bildstod/main.py:462
+#: src/bildstod/main.py:498
 msgid "Show notifications before scheduled activities"
 msgstr ""
 
-#: src/bildstod/main.py:469
+#: src/bildstod/main.py:505
 msgid "Developer"
 msgstr ""
 
-#: src/bildstod/main.py:471
+#: src/bildstod/main.py:507
 msgid "Debug mode"
 msgstr ""
 
-#: src/bildstod/main.py:472
+#: src/bildstod/main.py:508
 msgid "Show extra logging in terminal"
 msgstr ""
 
-#: src/bildstod/main.py:504
+#: src/bildstod/main.py:540
 msgid "Cleared"
 msgstr ""
 
-#: src/bildstod/main.py:526
+#: src/bildstod/main.py:562
 msgid "Refreshing..."
 msgstr ""
 
