@@ -1,40 +1,36 @@
-# Bildstöd
+# 🖼️ Bildstöd
 
-[![Version](https://img.shields.io/badge/version-0.3.0-blue)](https://github.com/yeager/bildstod/releases)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Transifex](https://img.shields.io/badge/Transifex-Translate-green.svg)](https://www.transifex.com/danielnylander/bildstod/)
+**Visual schedule and picture support tool with ARASAAC integration**
 
-Visual schedule and picture communication tool with ARASAAC pictogram support — GTK4/Adwaita.
+Part of the [Autismappar](https://www.autismappar.se) suite — free, open-source tools for communication and daily structure for children with autism and language disorders.
 
-> **For:** Children and adults with autism, developmental language disorder (DLD), ADHD, or intellectual disabilities. Provides visual support through picture schedules, image cards, and ARASAAC pictograms.
-
-![Bildstöd](screenshots/main.png)
+![Screenshot](screenshots/main.png)
 
 ## Features
 
-- **Visual schedules** — create daily schedules with images and text
-- **ARASAAC pictograms** — search and download from 13,000+ free pictograms
-- **Image cards** — customizable cards with text labels and categories
-- **Drag & drop** — reorder schedule items easily
-- **Categories** — organize images by activity type
-- **CSV export** — export schedules with app branding (Ctrl+E)
-- **Dark/light theme** — toggle via header bar
-- **Keyboard shortcuts** — Ctrl+Q, F5, Ctrl+/
+- 🎉 **Welcome dialog** — guided first-launch experience
+- ⚙️ **Preferences** — theme (light/dark/system), icon size, cache management
+- 📤 **Export/Print** — CSV, JSON and PDF export (Ctrl+E), tagged with app name, version and author
+- 🇸🇪 **Swedish ARASAAC search** — 13,000+ pictogram keywords, works completely offline
+- 🌍 **Translated** — full Swedish translation via [Transifex](https://app.transifex.com/danielnylander/bildstod)
+- ⌨️ **Keyboard shortcuts** — Ctrl+E (export), Ctrl+, (preferences), F1 (about), Ctrl+/ (shortcuts)
+- 🖼️ **ARASAAC pictograms** — Creative Commons licensed pictograms from [arasaac.org](https://arasaac.org)
 
-## Installation
+## Install
 
 ### Debian/Ubuntu
 
 ```bash
-echo "deb [signed-by=/usr/share/keyrings/yeager-keyring.gpg] https://yeager.github.io/debian-repo stable main" | sudo tee /etc/apt/sources.list.d/yeager.list
-curl -fsSL https://yeager.github.io/debian-repo/yeager-keyring.gpg | sudo tee /usr/share/keyrings/yeager-keyring.gpg > /dev/null
+# Add repository
+curl -fsSL https://yeager.github.io/debian-repo/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/danne-l10n-suite.gpg
+echo "deb [signed-by=/usr/share/keyrings/danne-l10n-suite.gpg] https://yeager.github.io/debian-repo stable main" | sudo tee /etc/apt/sources.list.d/danne-l10n-suite.list
 sudo apt update && sudo apt install bildstod
 ```
 
-### Fedora/openSUSE
+### Fedora/RHEL
 
 ```bash
-sudo dnf config-manager --add-repo https://yeager.github.io/rpm-repo/yeager.repo
+sudo dnf config-manager --add-repo https://yeager.github.io/rpm-repo/packages/
 sudo dnf install bildstod
 ```
 
@@ -42,22 +38,38 @@ sudo dnf install bildstod
 
 ```bash
 git clone https://github.com/yeager/bildstod.git
-cd bildstod && pip install -e .
+cd bildstod
+pip install .
 bildstod
 ```
 
-## ARASAAC Attribution
+## Dependencies
 
-Pictographic symbols © Gobierno de Aragón, created by Sergio Palao for [ARASAAC](https://arasaac.org), distributed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- Python 3.10+
+- GTK 4
+- libadwaita 1.4+
+- espeak-ng (optional, for text-to-speech)
 
 ## Translation
 
-Help translate on [Transifex](https://www.transifex.com/danielnylander/bildstod/).
+Translate Bildstöd on [Transifex](https://app.transifex.com/danielnylander/bildstod).
+
+Source strings are in English. Swedish translation by Daniel Nylander.
+
+## ARASAAC
+
+Pictograms by Sergio Palao, from [ARASAAC](https://arasaac.org), licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) by the Government of Aragon.
+
+Swedish ARASAAC keywords (15,607 entries) translated by Daniel Nylander.
 
 ## License
 
-GPL-3.0-or-later — see [LICENSE](LICENSE) for details.
+GPL-3.0-or-later
 
 ## Author
 
-**Daniel Nylander** — [danielnylander.se](https://danielnylander.se)
+**Daniel Nylander** — [daniel@danielnylander.se](mailto:daniel@danielnylander.se)
+
+- 🌐 [autismappar.se](https://www.autismappar.se)
+- 💻 [github.com/yeager](https://github.com/yeager)
+- 🌍 [Transifex](https://app.transifex.com/danielnylander)
