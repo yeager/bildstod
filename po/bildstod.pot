@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the bildstod package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: bildstod 0.2.0\n"
-"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
-"POT-Creation-Date: 2026-02-17 19:47+0100\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-20 06:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,52 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/bildstod/arasaac.py:97
+msgid "Search ARASAAC pictograms (in English)..."
+msgstr ""
+
+#: src/bildstod/arasaac.py:128
+msgid "Search for pictograms to add to your library."
+msgstr ""
+
+#: src/bildstod/arasaac.py:158
+msgid "Searching..."
+msgstr ""
+
+#: src/bildstod/arasaac.py:174
+#, python-format
+msgid "No pictograms found for '%s'."
+msgstr ""
+
+#: src/bildstod/arasaac.py:178
+#, python-format
+msgid "%d pictograms found"
+msgstr ""
+
+#: src/bildstod/arasaac.py:186
+#, python-format
+msgid "ARASAAC: %d results for '%s'"
+msgstr ""
+
+#: src/bildstod/arasaac.py:205 src/bildstod/library.py:286
+#: src/bildstod/schedule.py:386
+msgid "Add"
+msgstr ""
+
+#: src/bildstod/arasaac.py:246
+msgid "Adding..."
+msgstr ""
+
+#: src/bildstod/arasaac.py:278 src/bildstod/schedule.py:346
+#: src/bildstod/schedule.py:403
+#, python-format
+msgid "Added: %s"
+msgstr ""
+
+#: src/bildstod/arasaac.py:280
+msgid "Error"
+msgstr ""
 
 #: src/bildstod/export.py:24
 msgid "Time"
@@ -50,7 +96,7 @@ msgstr ""
 msgid "%d minutes"
 msgstr ""
 
-#: src/bildstod/export.py:140 src/bildstod/main.py:60
+#: src/bildstod/export.py:140 src/bildstod/main.py:61
 msgid "Export Schedule"
 msgstr ""
 
@@ -59,7 +105,7 @@ msgid "Choose export format:"
 msgstr ""
 
 #: src/bildstod/export.py:144 src/bildstod/library.py:285
-#: src/bildstod/main.py:182 src/bildstod/schedule.py:385
+#: src/bildstod/main.py:188 src/bildstod/schedule.py:385
 msgid "Cancel"
 msgstr ""
 
@@ -169,10 +215,6 @@ msgstr ""
 msgid "Activity name"
 msgstr ""
 
-#: src/bildstod/library.py:286 src/bildstod/schedule.py:386
-msgid "Add"
-msgstr ""
-
 #: src/bildstod/library.py:307
 #, python-format
 msgid "Image imported: %s"
@@ -183,99 +225,103 @@ msgstr ""
 msgid "Image removed: %s"
 msgstr ""
 
-#: src/bildstod/main.py:36 src/bildstod/main.py:206
+#: src/bildstod/main.py:37 src/bildstod/main.py:212
 msgid "Bildstöd"
 msgstr ""
 
-#: src/bildstod/main.py:59
+#: src/bildstod/main.py:60
 msgid "Templates"
 msgstr ""
 
-#: src/bildstod/main.py:61
+#: src/bildstod/main.py:62
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/bildstod/main.py:62
+#: src/bildstod/main.py:63
 msgid "About Bildstöd"
 msgstr ""
 
-#: src/bildstod/main.py:81
+#: src/bildstod/main.py:84
 msgid "Schedule"
 msgstr ""
 
-#: src/bildstod/main.py:84
+#: src/bildstod/main.py:87
 msgid "Now"
 msgstr ""
 
-#: src/bildstod/main.py:87
+#: src/bildstod/main.py:90
 msgid "Library"
 msgstr ""
 
-#: src/bildstod/main.py:99 src/bildstod/main.py:325
+#: src/bildstod/main.py:93
+msgid "ARASAAC"
+msgstr ""
+
+#: src/bildstod/main.py:105 src/bildstod/main.py:333
 msgid "Ready"
 msgstr ""
 
-#: src/bildstod/main.py:136
+#: src/bildstod/main.py:142
 #, python-format
 msgid "Completed: %s"
 msgstr ""
 
-#: src/bildstod/main.py:145
+#: src/bildstod/main.py:151
 #, python-format
 msgid "Added to schedule: %s"
 msgstr ""
 
-#: src/bildstod/main.py:149
+#: src/bildstod/main.py:155
 msgid "Schedule Templates"
 msgstr ""
 
-#: src/bildstod/main.py:150
+#: src/bildstod/main.py:156
 msgid "Load a template or save current schedule as template:"
 msgstr ""
 
-#: src/bildstod/main.py:162
+#: src/bildstod/main.py:168
 #, python-format
 msgid "%d activities"
 msgstr ""
 
-#: src/bildstod/main.py:171
+#: src/bildstod/main.py:177
 msgid "Custom"
 msgstr ""
 
-#: src/bildstod/main.py:172
+#: src/bildstod/main.py:178
 #, python-format
 msgid "%d activities (custom)"
 msgstr ""
 
-#: src/bildstod/main.py:183
+#: src/bildstod/main.py:189
 msgid "Save Current as Template"
 msgstr ""
 
-#: src/bildstod/main.py:184
+#: src/bildstod/main.py:190
 msgid "Load Selected"
 msgstr ""
 
-#: src/bildstod/main.py:198
+#: src/bildstod/main.py:204
 #, python-format
 msgid "Template loaded: %s"
 msgstr ""
 
-#: src/bildstod/main.py:202
+#: src/bildstod/main.py:208
 #, python-format
 msgid "Template saved: %s"
 msgstr ""
 
-#: src/bildstod/main.py:212
+#: src/bildstod/main.py:220
 msgid ""
 "Visual schedule and picture support tool for children with autism and "
 "language disorders."
 msgstr ""
 
-#: src/bildstod/main.py:214
-msgid "translator-credits"
+#: src/bildstod/main.py:222
+msgid "Translate this app: https://www.transifex.com/danielnylander/bildstod/"
 msgstr ""
 
-#: src/bildstod/main.py:322
+#: src/bildstod/main.py:330
 msgid "Refreshing..."
 msgstr ""
 
@@ -332,11 +378,6 @@ msgstr ""
 
 #: src/bildstod/schedule.py:318
 msgid "Remove activity"
-msgstr ""
-
-#: src/bildstod/schedule.py:346 src/bildstod/schedule.py:403
-#, python-format
-msgid "Added: %s"
 msgstr ""
 
 #: src/bildstod/schedule.py:355

@@ -19,6 +19,7 @@ _ = gettext.gettext
 
 from bildstod import __version__
 from bildstod.library import PictureLibrary, LibraryView
+from bildstod.arasaac import ArasaacSearchView
 from bildstod.schedule import ScheduleView
 from bildstod.now_view import NowView
 from bildstod.templates import (
@@ -76,6 +77,8 @@ class MainWindow(Adw.ApplicationWindow):
         self.library_view = LibraryView(self.library, status_callback=self._set_status)
         self.library_view.set_on_item_activated(self._on_library_item_activated)
 
+        self.arasaac_view = ArasaacSearchView(self.library, status_callback=self._set_status)
+
         # Add views to stack
         self.view_stack.add_titled_with_icon(
             self.schedule_view, "schedule", _("Schedule"), "view-list-symbolic"
@@ -85,6 +88,9 @@ class MainWindow(Adw.ApplicationWindow):
         )
         self.view_stack.add_titled_with_icon(
             self.library_view, "library", _("Library"), "folder-pictures-symbolic"
+        )
+        self.view_stack.add_titled_with_icon(
+            self.arasaac_view, "arasaac", _("ARASAAC"), "system-search-symbolic"
         )
 
         main_box.append(self.view_stack)
