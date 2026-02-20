@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 20:21+0100\n"
+"POT-Creation-Date: 2026-02-20 21:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,137 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: src/bildstod/arasaac.py:166
-msgid "Search pictograms (Swedish or English)..."
-msgstr ""
-
-#: src/bildstod/arasaac.py:196
-msgid "Search for pictograms to add to your library."
-msgstr ""
-
-#: src/bildstod/arasaac.py:236
-msgid "Searching..."
-msgstr ""
-
-#: src/bildstod/arasaac.py:255
-#, python-format
-msgid "No pictograms found for '%s'."
-msgstr ""
-
-#: src/bildstod/arasaac.py:259
-#, python-format
-msgid "%d pictograms found"
-msgstr ""
-
-#: src/bildstod/arasaac.py:267
-#, python-format
-msgid "ARASAAC: %d results for '%s'"
-msgstr ""
-
-#: src/bildstod/arasaac.py:285 src/bildstod/library.py:286
-#: src/bildstod/schedule.py:386
-msgid "Add"
-msgstr ""
-
-#: src/bildstod/arasaac.py:328
-msgid "Adding..."
-msgstr ""
-
-#: src/bildstod/arasaac.py:358 src/bildstod/schedule.py:346
-#: src/bildstod/schedule.py:403
-#, python-format
-msgid "Added: %s"
-msgstr ""
-
-#: src/bildstod/arasaac.py:360
-msgid "Error"
-msgstr ""
-
-#: src/bildstod/export.py:29
-msgid "Time"
-msgstr ""
-
-#: src/bildstod/export.py:29
-msgid "Activity"
-msgstr ""
-
-#: src/bildstod/export.py:29
-msgid "Duration (min)"
-msgstr ""
-
-#: src/bildstod/export.py:29
-msgid "Category"
-msgstr ""
-
-#: src/bildstod/export.py:29
-msgid "Done"
-msgstr ""
-
-#: src/bildstod/export.py:36
-msgid "Yes"
-msgstr ""
-
-#: src/bildstod/export.py:36
-msgid "No"
-msgstr ""
-
-#: src/bildstod/export.py:123 src/bildstod/schedule.py:293
-#, python-format
-msgid "%d minutes"
-msgstr ""
-
-#: src/bildstod/export.py:157 src/bildstod/main.py:63
-msgid "Export Schedule"
-msgstr ""
-
-#: src/bildstod/export.py:158
-msgid "Choose export format:"
-msgstr ""
-
-#: src/bildstod/export.py:161 src/bildstod/library.py:285
-#: src/bildstod/main.py:191 src/bildstod/schedule.py:385
-msgid "Cancel"
-msgstr ""
-
-#: src/bildstod/export.py:162
-msgid "CSV"
-msgstr ""
-
-#: src/bildstod/export.py:163
-msgid "JSON"
-msgstr ""
-
-#: src/bildstod/export.py:164
-msgid "PDF"
-msgstr ""
-
-#: src/bildstod/export.py:186
-msgid "Save Export"
-msgstr ""
-
-#: src/bildstod/export.py:203
-#, python-format
-msgid "Exported %s at %s"
-msgstr ""
-
-#: src/bildstod/export.py:206 src/bildstod/export.py:231
-#, python-format
-msgid "Export error: %s"
-msgstr ""
-
-#: src/bildstod/export.py:211
-msgid "Save PDF"
-msgstr ""
-
-#: src/bildstod/export.py:226
-#, python-format
-msgid "PDF exported at %s"
-msgstr ""
-
-#: src/bildstod/export.py:228
-msgid "PDF export requires cairo. Install pycairo."
-msgstr ""
 
 #: src/bildstod/library.py:19
 msgid "Morning Routine"
@@ -215,6 +84,16 @@ msgstr ""
 msgid "Activity name"
 msgstr ""
 
+#: src/bildstod/library.py:285 src/bildstod/export.py:161
+#: src/bildstod/schedule.py:385 src/bildstod/main.py:191
+msgid "Cancel"
+msgstr ""
+
+#: src/bildstod/library.py:286 src/bildstod/schedule.py:386
+#: src/bildstod/arasaac.py:285
+msgid "Add"
+msgstr ""
+
 #: src/bildstod/library.py:307
 #, python-format
 msgid "Image imported: %s"
@@ -223,6 +102,280 @@ msgstr ""
 #: src/bildstod/library.py:320
 #, python-format
 msgid "Image removed: %s"
+msgstr ""
+
+#: src/bildstod/timer.py:44 src/bildstod/timer.py:69 src/bildstod/timer.py:140
+msgid "Pause"
+msgstr ""
+
+#: src/bildstod/timer.py:50
+msgid "Skip"
+msgstr ""
+
+#: src/bildstod/timer.py:136
+msgid "Resume"
+msgstr ""
+
+#: src/bildstod/timer.py:163
+msgid "Timer finished!"
+msgstr ""
+
+#: src/bildstod/export.py:29
+msgid "Time"
+msgstr ""
+
+#: src/bildstod/export.py:29
+msgid "Activity"
+msgstr ""
+
+#: src/bildstod/export.py:29
+msgid "Duration (min)"
+msgstr ""
+
+#: src/bildstod/export.py:29
+msgid "Category"
+msgstr ""
+
+#: src/bildstod/export.py:29
+msgid "Done"
+msgstr ""
+
+#: src/bildstod/export.py:36
+msgid "Yes"
+msgstr ""
+
+#: src/bildstod/export.py:36
+msgid "No"
+msgstr ""
+
+#: src/bildstod/export.py:123 src/bildstod/schedule.py:293
+#, python-format
+msgid "%d minutes"
+msgstr ""
+
+#: src/bildstod/export.py:157 src/bildstod/main.py:63
+msgid "Export Schedule"
+msgstr ""
+
+#: src/bildstod/export.py:158
+msgid "Choose export format:"
+msgstr ""
+
+#: src/bildstod/export.py:162
+msgid "CSV"
+msgstr ""
+
+#: src/bildstod/export.py:163
+msgid "JSON"
+msgstr ""
+
+#: src/bildstod/export.py:164
+msgid "PDF"
+msgstr ""
+
+#: src/bildstod/export.py:186
+msgid "Save Export"
+msgstr ""
+
+#: src/bildstod/export.py:203
+#, python-format
+msgid "Exported %s at %s"
+msgstr ""
+
+#: src/bildstod/export.py:206 src/bildstod/export.py:231
+#, python-format
+msgid "Export error: %s"
+msgstr ""
+
+#: src/bildstod/export.py:211
+msgid "Save PDF"
+msgstr ""
+
+#: src/bildstod/export.py:226
+#, python-format
+msgid "PDF exported at %s"
+msgstr ""
+
+#: src/bildstod/export.py:228
+msgid "PDF export requires cairo. Install pycairo."
+msgstr ""
+
+#: src/bildstod/templates.py:23
+msgid "School Day"
+msgstr ""
+
+#: src/bildstod/templates.py:25 src/bildstod/templates.py:44
+#: src/bildstod/templates.py:60
+msgid "Wake up"
+msgstr ""
+
+#: src/bildstod/templates.py:26 src/bildstod/templates.py:45
+#: src/bildstod/templates.py:61
+msgid "Breakfast"
+msgstr ""
+
+#: src/bildstod/templates.py:27 src/bildstod/templates.py:46
+#: src/bildstod/templates.py:62
+msgid "Get dressed"
+msgstr ""
+
+#: src/bildstod/templates.py:28 src/bildstod/templates.py:37
+msgid "Brush teeth"
+msgstr ""
+
+#: src/bildstod/templates.py:29
+msgid "Go to school"
+msgstr ""
+
+#: src/bildstod/templates.py:31 src/bildstod/templates.py:48
+#: src/bildstod/templates.py:64
+msgid "Lunch"
+msgstr ""
+
+#: src/bildstod/templates.py:32
+msgid "Come home"
+msgstr ""
+
+#: src/bildstod/templates.py:33 src/bildstod/templates.py:51
+msgid "Snack"
+msgstr ""
+
+#: src/bildstod/templates.py:35 src/bildstod/templates.py:52
+#: src/bildstod/templates.py:67
+msgid "Dinner"
+msgstr ""
+
+#: src/bildstod/templates.py:36 src/bildstod/templates.py:53
+#: src/bildstod/templates.py:68
+msgid "Evening routine"
+msgstr ""
+
+#: src/bildstod/templates.py:38 src/bildstod/templates.py:54
+#: src/bildstod/templates.py:69
+msgid "Bedtime"
+msgstr ""
+
+#: src/bildstod/templates.py:42
+msgid "Weekend"
+msgstr ""
+
+#: src/bildstod/templates.py:58
+msgid "Holiday"
+msgstr ""
+
+#: src/bildstod/schedule.py:81 src/bildstod/schedule.py:101
+msgid "New Schedule"
+msgstr ""
+
+#: src/bildstod/schedule.py:168
+msgid "Save Schedule"
+msgstr ""
+
+#: src/bildstod/schedule.py:173 src/bildstod/schedule.py:416
+msgid "Load Schedule"
+msgstr ""
+
+#: src/bildstod/schedule.py:178 src/bildstod/schedule.py:363
+msgid "Add Activity"
+msgstr ""
+
+#: src/bildstod/schedule.py:222
+msgid ""
+"No activities yet.\n"
+"Add from the library or click + to add."
+msgstr ""
+
+#: src/bildstod/schedule.py:305
+msgid "Time (HH:MM)"
+msgstr ""
+
+#: src/bildstod/schedule.py:312
+msgid "Mark as done"
+msgstr ""
+
+#: src/bildstod/schedule.py:318
+msgid "Remove activity"
+msgstr ""
+
+#: src/bildstod/schedule.py:346 src/bildstod/schedule.py:403
+#: src/bildstod/arasaac.py:358
+#, python-format
+msgid "Added: %s"
+msgstr ""
+
+#: src/bildstod/schedule.py:355
+msgid "Library Empty"
+msgstr ""
+
+#: src/bildstod/schedule.py:356
+msgid "Add images to the library first."
+msgstr ""
+
+#: src/bildstod/schedule.py:358
+msgid "OK"
+msgstr ""
+
+#: src/bildstod/schedule.py:364
+msgid "Select an activity from the library:"
+msgstr ""
+
+#: src/bildstod/schedule.py:409
+#, python-format
+msgid "Schedule saved: %s"
+msgstr ""
+
+#: src/bildstod/schedule.py:412
+#, python-format
+msgid "Error saving: %s"
+msgstr ""
+
+#: src/bildstod/schedule.py:419
+msgid "Schedule files"
+msgstr ""
+
+#: src/bildstod/schedule.py:438
+#, python-format
+msgid "Schedule loaded: %s"
+msgstr ""
+
+#: src/bildstod/schedule.py:441
+#, python-format
+msgid "Error loading: %s"
+msgstr ""
+
+#: src/bildstod/arasaac.py:166
+msgid "Search pictograms (Swedish or English)..."
+msgstr ""
+
+#: src/bildstod/arasaac.py:196
+msgid "Search for pictograms to add to your library."
+msgstr ""
+
+#: src/bildstod/arasaac.py:236
+msgid "Searching..."
+msgstr ""
+
+#: src/bildstod/arasaac.py:255
+#, python-format
+msgid "No pictograms found for '%s'."
+msgstr ""
+
+#: src/bildstod/arasaac.py:259
+#, python-format
+msgid "%d pictograms found"
+msgstr ""
+
+#: src/bildstod/arasaac.py:267
+#, python-format
+msgid "ARASAAC: %d results for '%s'"
+msgstr ""
+
+#: src/bildstod/arasaac.py:328
+msgid "Adding..."
+msgstr ""
+
+#: src/bildstod/arasaac.py:360
+msgid "Error"
 msgstr ""
 
 #: src/bildstod/main.py:39 src/bildstod/main.py:215
@@ -469,157 +622,4 @@ msgstr ""
 #: src/bildstod/now_view.py:168
 #, python-format
 msgid "Time's up for: %s"
-msgstr ""
-
-#: src/bildstod/schedule.py:81 src/bildstod/schedule.py:101
-msgid "New Schedule"
-msgstr ""
-
-#: src/bildstod/schedule.py:168
-msgid "Save Schedule"
-msgstr ""
-
-#: src/bildstod/schedule.py:173 src/bildstod/schedule.py:416
-msgid "Load Schedule"
-msgstr ""
-
-#: src/bildstod/schedule.py:178 src/bildstod/schedule.py:363
-msgid "Add Activity"
-msgstr ""
-
-#: src/bildstod/schedule.py:222
-msgid ""
-"No activities yet.\n"
-"Add from the library or click + to add."
-msgstr ""
-
-#: src/bildstod/schedule.py:305
-msgid "Time (HH:MM)"
-msgstr ""
-
-#: src/bildstod/schedule.py:312
-msgid "Mark as done"
-msgstr ""
-
-#: src/bildstod/schedule.py:318
-msgid "Remove activity"
-msgstr ""
-
-#: src/bildstod/schedule.py:355
-msgid "Library Empty"
-msgstr ""
-
-#: src/bildstod/schedule.py:356
-msgid "Add images to the library first."
-msgstr ""
-
-#: src/bildstod/schedule.py:358
-msgid "OK"
-msgstr ""
-
-#: src/bildstod/schedule.py:364
-msgid "Select an activity from the library:"
-msgstr ""
-
-#: src/bildstod/schedule.py:409
-#, python-format
-msgid "Schedule saved: %s"
-msgstr ""
-
-#: src/bildstod/schedule.py:412
-#, python-format
-msgid "Error saving: %s"
-msgstr ""
-
-#: src/bildstod/schedule.py:419
-msgid "Schedule files"
-msgstr ""
-
-#: src/bildstod/schedule.py:438
-#, python-format
-msgid "Schedule loaded: %s"
-msgstr ""
-
-#: src/bildstod/schedule.py:441
-#, python-format
-msgid "Error loading: %s"
-msgstr ""
-
-#: src/bildstod/templates.py:23
-msgid "School Day"
-msgstr ""
-
-#: src/bildstod/templates.py:25 src/bildstod/templates.py:44
-#: src/bildstod/templates.py:60
-msgid "Wake up"
-msgstr ""
-
-#: src/bildstod/templates.py:26 src/bildstod/templates.py:45
-#: src/bildstod/templates.py:61
-msgid "Breakfast"
-msgstr ""
-
-#: src/bildstod/templates.py:27 src/bildstod/templates.py:46
-#: src/bildstod/templates.py:62
-msgid "Get dressed"
-msgstr ""
-
-#: src/bildstod/templates.py:28 src/bildstod/templates.py:37
-msgid "Brush teeth"
-msgstr ""
-
-#: src/bildstod/templates.py:29
-msgid "Go to school"
-msgstr ""
-
-#: src/bildstod/templates.py:31 src/bildstod/templates.py:48
-#: src/bildstod/templates.py:64
-msgid "Lunch"
-msgstr ""
-
-#: src/bildstod/templates.py:32
-msgid "Come home"
-msgstr ""
-
-#: src/bildstod/templates.py:33 src/bildstod/templates.py:51
-msgid "Snack"
-msgstr ""
-
-#: src/bildstod/templates.py:35 src/bildstod/templates.py:52
-#: src/bildstod/templates.py:67
-msgid "Dinner"
-msgstr ""
-
-#: src/bildstod/templates.py:36 src/bildstod/templates.py:53
-#: src/bildstod/templates.py:68
-msgid "Evening routine"
-msgstr ""
-
-#: src/bildstod/templates.py:38 src/bildstod/templates.py:54
-#: src/bildstod/templates.py:69
-msgid "Bedtime"
-msgstr ""
-
-#: src/bildstod/templates.py:42
-msgid "Weekend"
-msgstr ""
-
-#: src/bildstod/templates.py:58
-msgid "Holiday"
-msgstr ""
-
-#: src/bildstod/timer.py:44 src/bildstod/timer.py:69 src/bildstod/timer.py:140
-msgid "Pause"
-msgstr ""
-
-#: src/bildstod/timer.py:50
-msgid "Skip"
-msgstr ""
-
-#: src/bildstod/timer.py:136
-msgid "Resume"
-msgstr ""
-
-#: src/bildstod/timer.py:163
-msgid "Timer finished!"
 msgstr ""
