@@ -30,6 +30,7 @@ from bildstod.templates import (
     prefetch_template_images,
 )
 from bildstod.export import show_export_dialog
+from bildstod.accessibility import apply_large_text
 
 
 class MainWindow(Adw.ApplicationWindow):
@@ -343,6 +344,7 @@ class Application(Adw.Application):
         self.settings = _load_settings()
 
     def do_activate(self):
+        apply_large_text()
         window = self.props.active_window
         if not window:
             window = MainWindow(application=self)
