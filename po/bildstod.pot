@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 08:20+0100\n"
+"POT-Creation-Date: 2026-02-21 15:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,88 +63,88 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: src/bildstod/export.py:29
+#: src/bildstod/export.py:30
 msgid "Time"
 msgstr ""
 
-#: src/bildstod/export.py:29
+#: src/bildstod/export.py:30
 msgid "Activity"
 msgstr ""
 
-#: src/bildstod/export.py:29
+#: src/bildstod/export.py:30
 msgid "Duration (min)"
 msgstr ""
 
-#: src/bildstod/export.py:29
+#: src/bildstod/export.py:30
 msgid "Category"
 msgstr ""
 
-#: src/bildstod/export.py:29
+#: src/bildstod/export.py:30
 msgid "Done"
 msgstr ""
 
-#: src/bildstod/export.py:36
+#: src/bildstod/export.py:37
 msgid "Yes"
 msgstr ""
 
-#: src/bildstod/export.py:36
+#: src/bildstod/export.py:37
 msgid "No"
 msgstr ""
 
-#: src/bildstod/export.py:123 src/bildstod/schedule.py:293
+#: src/bildstod/export.py:125 src/bildstod/schedule.py:293
 #, python-format
 msgid "%d minutes"
 msgstr ""
 
-#: src/bildstod/export.py:157 src/bildstod/main.py:63
+#: src/bildstod/export.py:159 src/bildstod/main.py:67
 msgid "Export Schedule"
 msgstr ""
 
-#: src/bildstod/export.py:158
+#: src/bildstod/export.py:160
 msgid "Choose export format:"
 msgstr ""
 
-#: src/bildstod/export.py:161 src/bildstod/library.py:285
-#: src/bildstod/main.py:191 src/bildstod/schedule.py:385
+#: src/bildstod/export.py:163 src/bildstod/library.py:285
+#: src/bildstod/main.py:195 src/bildstod/schedule.py:385
 msgid "Cancel"
 msgstr ""
 
-#: src/bildstod/export.py:162
+#: src/bildstod/export.py:164
 msgid "CSV"
 msgstr ""
 
-#: src/bildstod/export.py:163
+#: src/bildstod/export.py:165
 msgid "JSON"
 msgstr ""
 
-#: src/bildstod/export.py:164
+#: src/bildstod/export.py:166
 msgid "PDF"
 msgstr ""
 
-#: src/bildstod/export.py:186
+#: src/bildstod/export.py:188
 msgid "Save Export"
 msgstr ""
 
-#: src/bildstod/export.py:203
+#: src/bildstod/export.py:205
 #, python-format
 msgid "Exported %s at %s"
 msgstr ""
 
-#: src/bildstod/export.py:206 src/bildstod/export.py:231
+#: src/bildstod/export.py:208 src/bildstod/export.py:233
 #, python-format
 msgid "Export error: %s"
 msgstr ""
 
-#: src/bildstod/export.py:211
+#: src/bildstod/export.py:213
 msgid "Save PDF"
 msgstr ""
 
-#: src/bildstod/export.py:226
+#: src/bildstod/export.py:228
 #, python-format
 msgid "PDF exported at %s"
 msgstr ""
 
-#: src/bildstod/export.py:228
+#: src/bildstod/export.py:230
 msgid "PDF export requires cairo. Install pycairo."
 msgstr ""
 
@@ -156,13 +156,13 @@ msgstr ""
 msgid "Meals"
 msgstr ""
 
-#: src/bildstod/library.py:21 src/bildstod/templates.py:30
+#: src/bildstod/library.py:21 src/bildstod/templates.py:83
 msgid "School"
 msgstr ""
 
-#: src/bildstod/library.py:22 src/bildstod/templates.py:34
-#: src/bildstod/templates.py:47 src/bildstod/templates.py:50
-#: src/bildstod/templates.py:63 src/bildstod/templates.py:66
+#: src/bildstod/library.py:22 src/bildstod/templates.py:87
+#: src/bildstod/templates.py:100 src/bildstod/templates.py:103
+#: src/bildstod/templates.py:116 src/bildstod/templates.py:119
 msgid "Play"
 msgstr ""
 
@@ -174,8 +174,8 @@ msgstr ""
 msgid "Transport"
 msgstr ""
 
-#: src/bildstod/library.py:25 src/bildstod/templates.py:49
-#: src/bildstod/templates.py:65
+#: src/bildstod/library.py:25 src/bildstod/templates.py:102
+#: src/bildstod/templates.py:118
 msgid "Rest"
 msgstr ""
 
@@ -225,101 +225,101 @@ msgstr ""
 msgid "Image removed: %s"
 msgstr ""
 
-#: src/bildstod/main.py:39 src/bildstod/main.py:215
+#: src/bildstod/main.py:40 src/bildstod/main.py:226
 msgid "Visual Support"
 msgstr ""
 
-#: src/bildstod/main.py:62
+#: src/bildstod/main.py:66
 msgid "Templates"
 msgstr ""
 
-#: src/bildstod/main.py:64 src/bildstod/main.py:410
+#: src/bildstod/main.py:68 src/bildstod/main.py:421
 msgid "Preferences"
 msgstr ""
 
-#: src/bildstod/main.py:65
+#: src/bildstod/main.py:69
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: src/bildstod/main.py:66
+#: src/bildstod/main.py:70
 msgid "About Visual Support"
 msgstr ""
 
-#: src/bildstod/main.py:87
+#: src/bildstod/main.py:91
 msgid "Schedule"
 msgstr ""
 
-#: src/bildstod/main.py:90
+#: src/bildstod/main.py:94
 msgid "Now"
 msgstr ""
 
-#: src/bildstod/main.py:93
+#: src/bildstod/main.py:97
 msgid "Library"
 msgstr ""
 
-#: src/bildstod/main.py:96
+#: src/bildstod/main.py:100
 msgid "ARASAAC"
 msgstr ""
 
-#: src/bildstod/main.py:108 src/bildstod/main.py:565
+#: src/bildstod/main.py:112 src/bildstod/main.py:576
 msgid "Ready"
 msgstr ""
 
-#: src/bildstod/main.py:145
+#: src/bildstod/main.py:149
 #, python-format
 msgid "Completed: %s"
 msgstr ""
 
-#: src/bildstod/main.py:154
+#: src/bildstod/main.py:158
 #, python-format
 msgid "Added to schedule: %s"
 msgstr ""
 
-#: src/bildstod/main.py:158
+#: src/bildstod/main.py:162
 msgid "Schedule Templates"
 msgstr ""
 
-#: src/bildstod/main.py:159
+#: src/bildstod/main.py:163
 msgid "Load a template or save current schedule as template:"
 msgstr ""
 
-#: src/bildstod/main.py:171
+#: src/bildstod/main.py:175
 #, python-format
 msgid "%d activities"
 msgstr ""
 
-#: src/bildstod/main.py:180
+#: src/bildstod/main.py:184
 msgid "Custom"
 msgstr ""
 
-#: src/bildstod/main.py:181
+#: src/bildstod/main.py:185
 #, python-format
 msgid "%d activities (custom)"
 msgstr ""
 
-#: src/bildstod/main.py:192
+#: src/bildstod/main.py:196
 msgid "Save Current as Template"
 msgstr ""
 
-#: src/bildstod/main.py:193
+#: src/bildstod/main.py:197
 msgid "Load Selected"
-msgstr ""
-
-#: src/bildstod/main.py:207
-#, python-format
-msgid "Template loaded: %s"
 msgstr ""
 
 #: src/bildstod/main.py:211
 #, python-format
+msgid "Template loaded: %s"
+msgstr ""
+
+#: src/bildstod/main.py:217
+#, python-format
 msgid "Template saved: %s"
 msgstr ""
 
-#: src/bildstod/main.py:226
+#: src/bildstod/main.py:237
 msgid "ARASAAC pictograms (https://arasaac.org)"
 msgstr ""
 
-#: src/bildstod/main.py:229
+#: src/bildstod/main.py:240
 msgid ""
 "Visual schedule and picture support tool with ARASAAC pictogram search for "
 "children with autism and language disorders.\n"
@@ -328,19 +328,19 @@ msgid ""
 "structure."
 msgstr ""
 
-#: src/bildstod/main.py:241
+#: src/bildstod/main.py:252
 msgid "Autismappar"
 msgstr ""
 
-#: src/bildstod/main.py:372
+#: src/bildstod/main.py:383
 msgid "Welcome"
 msgstr ""
 
-#: src/bildstod/main.py:378
+#: src/bildstod/main.py:389
 msgid "Welcome to Visual Support"
 msgstr ""
 
-#: src/bildstod/main.py:380
+#: src/bildstod/main.py:391
 msgid ""
 "Picture-based communication and scheduling.\n"
 "\n"
@@ -350,135 +350,135 @@ msgid ""
 "✓ Export and share schedules"
 msgstr ""
 
-#: src/bildstod/main.py:387
+#: src/bildstod/main.py:398
 msgid "Get Started"
 msgstr ""
 
-#: src/bildstod/main.py:413
+#: src/bildstod/main.py:424
 msgid "General"
 msgstr ""
 
-#: src/bildstod/main.py:417
+#: src/bildstod/main.py:428
 msgid "Appearance"
 msgstr ""
 
-#: src/bildstod/main.py:420
+#: src/bildstod/main.py:431
 msgid "Theme"
 msgstr ""
 
-#: src/bildstod/main.py:421
+#: src/bildstod/main.py:432
 msgid "Choose light, dark, or follow system"
 msgstr ""
 
-#: src/bildstod/main.py:423
+#: src/bildstod/main.py:434
 msgid "System"
 msgstr ""
 
-#: src/bildstod/main.py:423
+#: src/bildstod/main.py:434
 msgid "Light"
 msgstr ""
 
-#: src/bildstod/main.py:423
+#: src/bildstod/main.py:434
 msgid "Dark"
 msgstr ""
 
-#: src/bildstod/main.py:431
+#: src/bildstod/main.py:442
 msgid "Icon Size"
 msgstr ""
 
-#: src/bildstod/main.py:432
+#: src/bildstod/main.py:443
 msgid "Size of pictogram icons"
 msgstr ""
 
-#: src/bildstod/main.py:434
+#: src/bildstod/main.py:445
 msgid "Small"
 msgstr ""
 
-#: src/bildstod/main.py:434
+#: src/bildstod/main.py:445
 msgid "Medium"
 msgstr ""
 
-#: src/bildstod/main.py:434
+#: src/bildstod/main.py:445
 msgid "Large"
 msgstr ""
 
-#: src/bildstod/main.py:445
+#: src/bildstod/main.py:456
 msgid "Speech"
 msgstr ""
 
-#: src/bildstod/main.py:448
+#: src/bildstod/main.py:459
 msgid "Speech Engine"
 msgstr ""
 
-#: src/bildstod/main.py:449
+#: src/bildstod/main.py:460
 msgid "Piper gives natural voices, espeak is robotic but lightweight"
 msgstr ""
 
-#: src/bildstod/main.py:451
+#: src/bildstod/main.py:462
 msgid "Automatic"
 msgstr ""
 
-#: src/bildstod/main.py:451
+#: src/bildstod/main.py:462
 msgid "Piper (natural)"
 msgstr ""
 
-#: src/bildstod/main.py:451
+#: src/bildstod/main.py:462
 msgid "espeak-ng (robotic)"
 msgstr ""
 
-#: src/bildstod/main.py:459
+#: src/bildstod/main.py:470
 msgid "Speech Speed"
 msgstr ""
 
-#: src/bildstod/main.py:460
+#: src/bildstod/main.py:471
 msgid "Slower speech can be easier to understand"
 msgstr ""
 
-#: src/bildstod/main.py:475
+#: src/bildstod/main.py:486
 msgid "Advanced"
 msgstr ""
 
-#: src/bildstod/main.py:479
+#: src/bildstod/main.py:490
 msgid "ARASAAC Cache"
 msgstr ""
 
-#: src/bildstod/main.py:484
+#: src/bildstod/main.py:495
 msgid "Cached pictograms"
 msgstr ""
 
-#: src/bildstod/main.py:486
+#: src/bildstod/main.py:497
 msgid "Clear"
 msgstr ""
 
-#: src/bildstod/main.py:495
+#: src/bildstod/main.py:506
 msgid "Notifications"
 msgstr ""
 
-#: src/bildstod/main.py:497
+#: src/bildstod/main.py:508
 msgid "Activity reminders"
 msgstr ""
 
-#: src/bildstod/main.py:498
+#: src/bildstod/main.py:509
 msgid "Show notifications before scheduled activities"
 msgstr ""
 
-#: src/bildstod/main.py:505
+#: src/bildstod/main.py:516
 msgid "Developer"
 msgstr ""
 
-#: src/bildstod/main.py:507
+#: src/bildstod/main.py:518
 msgid "Debug mode"
 msgstr ""
 
-#: src/bildstod/main.py:508
+#: src/bildstod/main.py:519
 msgid "Show extra logging in terminal"
 msgstr ""
 
-#: src/bildstod/main.py:540
+#: src/bildstod/main.py:551
 msgid "Cleared"
 msgstr ""
 
-#: src/bildstod/main.py:562
+#: src/bildstod/main.py:573
 msgid "Refreshing..."
 msgstr ""
 
@@ -577,66 +577,66 @@ msgstr ""
 msgid "Error loading: %s"
 msgstr ""
 
-#: src/bildstod/templates.py:23
+#: src/bildstod/templates.py:76
 msgid "School Day"
 msgstr ""
 
-#: src/bildstod/templates.py:25 src/bildstod/templates.py:44
-#: src/bildstod/templates.py:60
+#: src/bildstod/templates.py:78 src/bildstod/templates.py:97
+#: src/bildstod/templates.py:113
 msgid "Wake up"
 msgstr ""
 
-#: src/bildstod/templates.py:26 src/bildstod/templates.py:45
-#: src/bildstod/templates.py:61
+#: src/bildstod/templates.py:79 src/bildstod/templates.py:98
+#: src/bildstod/templates.py:114
 msgid "Breakfast"
 msgstr ""
 
-#: src/bildstod/templates.py:27 src/bildstod/templates.py:46
-#: src/bildstod/templates.py:62
+#: src/bildstod/templates.py:80 src/bildstod/templates.py:99
+#: src/bildstod/templates.py:115
 msgid "Get dressed"
 msgstr ""
 
-#: src/bildstod/templates.py:28 src/bildstod/templates.py:37
+#: src/bildstod/templates.py:81 src/bildstod/templates.py:90
 msgid "Brush teeth"
 msgstr ""
 
-#: src/bildstod/templates.py:29
+#: src/bildstod/templates.py:82
 msgid "Go to school"
 msgstr ""
 
-#: src/bildstod/templates.py:31 src/bildstod/templates.py:48
-#: src/bildstod/templates.py:64
+#: src/bildstod/templates.py:84 src/bildstod/templates.py:101
+#: src/bildstod/templates.py:117
 msgid "Lunch"
 msgstr ""
 
-#: src/bildstod/templates.py:32
+#: src/bildstod/templates.py:85
 msgid "Come home"
 msgstr ""
 
-#: src/bildstod/templates.py:33 src/bildstod/templates.py:51
+#: src/bildstod/templates.py:86 src/bildstod/templates.py:104
 msgid "Snack"
 msgstr ""
 
-#: src/bildstod/templates.py:35 src/bildstod/templates.py:52
-#: src/bildstod/templates.py:67
+#: src/bildstod/templates.py:88 src/bildstod/templates.py:105
+#: src/bildstod/templates.py:120
 msgid "Dinner"
 msgstr ""
 
-#: src/bildstod/templates.py:36 src/bildstod/templates.py:53
-#: src/bildstod/templates.py:68
+#: src/bildstod/templates.py:89 src/bildstod/templates.py:106
+#: src/bildstod/templates.py:121
 msgid "Evening routine"
 msgstr ""
 
-#: src/bildstod/templates.py:38 src/bildstod/templates.py:54
-#: src/bildstod/templates.py:69
+#: src/bildstod/templates.py:91 src/bildstod/templates.py:107
+#: src/bildstod/templates.py:122
 msgid "Bedtime"
 msgstr ""
 
-#: src/bildstod/templates.py:42
+#: src/bildstod/templates.py:95
 msgid "Weekend"
 msgstr ""
 
-#: src/bildstod/templates.py:58
+#: src/bildstod/templates.py:111
 msgid "Holiday"
 msgstr ""
 
