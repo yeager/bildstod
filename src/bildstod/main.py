@@ -87,7 +87,10 @@ class MainWindow(Adw.ApplicationWindow):
 
         self.arasaac_view = ArasaacSearchView(self.library, status_callback=self._set_status)
 
-        # Add views to stack
+        # Add views to stack — Library first for better first-impression
+        self.view_stack.add_titled_with_icon(
+            self.library_view, "library", _("Library"), "folder-pictures-symbolic"
+        )
         self.view_stack.add_titled_with_icon(
             self.schedule_view, "schedule", _("Schedule"), "view-list-symbolic"
         )
@@ -95,17 +98,10 @@ class MainWindow(Adw.ApplicationWindow):
             self.now_view, "now", _("Now"), "media-playback-start-symbolic"
         )
         self.view_stack.add_titled_with_icon(
-            self.library_view, "library", _("Library"), "folder-pictures-symbolic"
-        )
-        self.view_stack.add_titled_with_icon(
             self.arasaac_view, "arasaac", _("ARASAAC"), "system-search-symbolic"
         )
 
         main_box.append(self.view_stack)
-
-        # Show Library tab by default if schedule is empty
-        if not self.schedule_view.schedule.items:
-            self.view_stack.set_visible_child_name("library")
 
         # Status bar
         status_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
