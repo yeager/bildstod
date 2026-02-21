@@ -36,7 +36,7 @@ class MainWindow(Adw.ApplicationWindow):
         super().__init__(*args, **kwargs)
 
         self.set_default_size(1000, 700)
-        self.set_title(_("Bildstöd"))
+        self.set_title(_("Visual Support"))
 
         # Initialize data
         self.library = PictureLibrary()
@@ -63,7 +63,7 @@ class MainWindow(Adw.ApplicationWindow):
         menu.append(_("Export Schedule"), "app.export")
         menu.append(_("Preferences"), "app.preferences")
         menu.append(_("Keyboard Shortcuts"), "app.shortcuts")
-        menu.append(_("About Bildstöd"), "app.about")
+        menu.append(_("About Visual Support"), "app.about")
         menu_btn.set_menu_model(menu)
         header.pack_end(menu_btn)
 
@@ -212,7 +212,7 @@ class MainWindow(Adw.ApplicationWindow):
 
     def show_about(self, action, param):
         about = Adw.AboutDialog(
-            application_name=_("Bildstöd"),
+            application_name=_("Visual Support"),
             application_icon="se.danielnylander.bildstod",
             developer_name="Daniel Nylander",
             version=__version__,
@@ -375,7 +375,7 @@ class Application(Adw.Application):
 
         page = Adw.StatusPage()
         page.set_icon_name("se.danielnylander.bildstod")
-        page.set_title(_("Welcome to Bildstöd"))
+        page.set_title(_("Welcome to Visual Support"))
         page.set_description(_(
             "Picture-based communication and scheduling.\n\n"
             "✓ Create visual schedules with pictograms\n"
