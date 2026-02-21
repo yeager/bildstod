@@ -13,6 +13,7 @@ from bildstod import __version__
 
 APP_LABEL = "Bildstöd"
 AUTHOR = "Daniel Nylander"
+WEBSITE = "www.autismappar.se"
 
 import gi
 gi.require_version('Gtk', '4.0')
@@ -36,7 +37,7 @@ def schedule_to_csv(schedule):
             _("Yes") if item.done else _("No"),
         ])
     writer.writerow([])
-    writer.writerow([f"{APP_LABEL} v{__version__} — {AUTHOR}"])
+    writer.writerow([f"{APP_LABEL} v{__version__} — {WEBSITE}"])
     return output.getvalue()
 
 
@@ -45,6 +46,7 @@ def schedule_to_json(schedule):
     data = schedule.to_dict()
     data["_exported_by"] = f"{APP_LABEL} v{__version__}"
     data["_author"] = AUTHOR
+    data["_website"] = WEBSITE
     return json.dumps(data, indent=2, ensure_ascii=False)
 
 
@@ -143,7 +145,7 @@ def export_schedule_pdf(schedule, output_path):
     # Footer with app name, version, and author
     ctx.set_font_size(9)
     ctx.set_source_rgb(0.5, 0.5, 0.5)
-    footer = f"{APP_LABEL} v{__version__} — {AUTHOR} — {datetime.now().strftime('%Y-%m-%d')}"
+    footer = f"{APP_LABEL} v{__version__} — {WEBSITE} — {datetime.now().strftime('%Y-%m-%d')}"
     ctx.move_to(40, height - 20)
     ctx.show_text(footer)
 
