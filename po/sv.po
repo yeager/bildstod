@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the bildstod package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: bildstod\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 15:17+0100\n"
+"POT-Creation-Date: 2026-02-21 20:53+0100\n"
 "PO-Revision-Date: 2026-02-16 16:18+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304855/sv/)\n"
@@ -21,309 +21,304 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/bildstod/arasaac.py:166
+#: src/arasaac.py:166
 msgid "Search pictograms (Swedish or English)..."
 msgstr "Sök efter piktogram (svenska eller engelska)..."
 
-#: src/bildstod/arasaac.py:196
+#: src/arasaac.py:196
 msgid "Search for pictograms to add to your library."
 msgstr "Sök efter piktogram att lägga till i ditt bibliotek."
 
-#: src/bildstod/arasaac.py:236
+#: src/arasaac.py:236
 msgid "Searching..."
 msgstr "Söker..."
 
-#: src/bildstod/arasaac.py:255
+#: src/arasaac.py:255
 #, python-format
 msgid "No pictograms found for '%s'."
 msgstr "Inga piktogram hittades för '%s'."
 
-#: src/bildstod/arasaac.py:259
+#: src/arasaac.py:259
 #, python-format
 msgid "%d pictograms found"
 msgstr "%d piktogram hittades"
 
-#: src/bildstod/arasaac.py:267
+#: src/arasaac.py:267
 #, python-format
 msgid "ARASAAC: %d results for '%s'"
 msgstr "ARASAAC: %d resultat för '%s'"
 
-#: src/bildstod/arasaac.py:285 src/bildstod/library.py:286
-#: src/bildstod/schedule.py:386
+#: src/arasaac.py:285 src/library.py:286 src/schedule.py:386
 msgid "Add"
 msgstr "Lägg till"
 
-#: src/bildstod/arasaac.py:328
+#: src/arasaac.py:328
 msgid "Adding..."
 msgstr "Lägger till..."
 
-#: src/bildstod/arasaac.py:358 src/bildstod/schedule.py:346
-#: src/bildstod/schedule.py:403
+#: src/arasaac.py:358 src/schedule.py:346 src/schedule.py:403
 #, python-format
 msgid "Added: %s"
 msgstr "Lade till: %s"
 
-#: src/bildstod/arasaac.py:360
+#: src/arasaac.py:360
 msgid "Error"
 msgstr "Fel"
 
-#: src/bildstod/export.py:14 src/bildstod/main.py:40 src/bildstod/main.py:226
+#: src/export.py:14 src/main.py:41 src/main.py:227
 msgid "Visual Support"
 msgstr "Bildstöd"
 
-#: src/bildstod/export.py:30
+#: src/export.py:30
 msgid "Time"
 msgstr "Tid"
 
-#: src/bildstod/export.py:30
+#: src/export.py:30
 msgid "Activity"
 msgstr "Aktivitet"
 
-#: src/bildstod/export.py:30
+#: src/export.py:30
 msgid "Duration (min)"
 msgstr "Varaktighet (min)"
 
-#: src/bildstod/export.py:30
+#: src/export.py:30
 msgid "Category"
 msgstr "Kategori"
 
-#: src/bildstod/export.py:30
+#: src/export.py:30
 msgid "Done"
 msgstr "Klar"
 
-#: src/bildstod/export.py:37
+#: src/export.py:37
 msgid "Yes"
 msgstr "Ja"
 
-#: src/bildstod/export.py:37
+#: src/export.py:37
 msgid "No"
 msgstr "Nej"
 
-#: src/bildstod/export.py:125 src/bildstod/schedule.py:293
+#: src/export.py:125 src/schedule.py:293
 #, python-format
 msgid "%d minutes"
 msgstr "%d minuter"
 
-#: src/bildstod/export.py:159 src/bildstod/main.py:67
+#: src/export.py:159 src/main.py:68
 msgid "Export Schedule"
 msgstr "Exportera schema"
 
-#: src/bildstod/export.py:160
+#: src/export.py:160
 msgid "Choose export format:"
 msgstr "Välj exportformat:"
 
-#: src/bildstod/export.py:163 src/bildstod/library.py:285
-#: src/bildstod/main.py:195 src/bildstod/schedule.py:385
+#: src/export.py:163 src/library.py:285 src/main.py:196 src/schedule.py:385
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/bildstod/export.py:164
+#: src/export.py:164
 msgid "CSV"
 msgstr "CSV"
 
-#: src/bildstod/export.py:165
+#: src/export.py:165
 msgid "JSON"
 msgstr "JSON"
 
-#: src/bildstod/export.py:166
+#: src/export.py:166
 msgid "PDF"
 msgstr "PDF"
 
-#: src/bildstod/export.py:188
+#: src/export.py:188
 msgid "Save Export"
 msgstr "Spara export"
 
-#: src/bildstod/export.py:205
+#: src/export.py:205
 #, python-format
 msgid "Exported %s at %s"
 msgstr "Exporterade %s till %s"
 
-#: src/bildstod/export.py:208 src/bildstod/export.py:233
+#: src/export.py:208 src/export.py:233
 #, python-format
 msgid "Export error: %s"
 msgstr "Exporteringsfel: %s"
 
-#: src/bildstod/export.py:213
+#: src/export.py:213
 msgid "Save PDF"
 msgstr "Spara PDF"
 
-#: src/bildstod/export.py:228
+#: src/export.py:228
 #, python-format
 msgid "PDF exported at %s"
 msgstr "PDF exporterades till %s"
 
-#: src/bildstod/export.py:230
+#: src/export.py:230
 msgid "PDF export requires cairo. Install pycairo."
 msgstr "PDF-export kräver cairo. Installera pycairo."
 
-#: src/bildstod/library.py:19
+#: src/library.py:19
 msgid "Morning Routine"
 msgstr "Morgonrutin"
 
-#: src/bildstod/library.py:20
+#: src/library.py:20
 msgid "Meals"
 msgstr "Måltider"
 
-#: src/bildstod/library.py:21 src/bildstod/templates.py:83
+#: src/library.py:21 src/templates.py:83
 msgid "School"
 msgstr "Skola"
 
-#: src/bildstod/library.py:22 src/bildstod/templates.py:87
-#: src/bildstod/templates.py:100 src/bildstod/templates.py:103
-#: src/bildstod/templates.py:116 src/bildstod/templates.py:119
+#: src/library.py:22 src/templates.py:87 src/templates.py:100
+#: src/templates.py:103 src/templates.py:116 src/templates.py:119
 msgid "Play"
 msgstr "Lek"
 
-#: src/bildstod/library.py:23
+#: src/library.py:23
 msgid "Hygiene"
 msgstr "Hygien"
 
-#: src/bildstod/library.py:24
+#: src/library.py:24
 msgid "Transport"
 msgstr "Transport"
 
-#: src/bildstod/library.py:25 src/bildstod/templates.py:102
-#: src/bildstod/templates.py:118
+#: src/library.py:25 src/templates.py:102 src/templates.py:118
 msgid "Rest"
 msgstr "Vila"
 
-#: src/bildstod/library.py:26
+#: src/library.py:26
 msgid "Evening Routine"
 msgstr "Kvällsrutin"
 
-#: src/bildstod/library.py:27 src/bildstod/library.py:248
+#: src/library.py:27 src/library.py:248
 msgid "Other"
 msgstr "Övrigt"
 
-#: src/bildstod/library.py:129 src/bildstod/library.py:255
+#: src/library.py:129 src/library.py:255
 msgid "Import Image"
 msgstr "Importera bild"
 
-#: src/bildstod/library.py:135
+#: src/library.py:135
 msgid "Remove"
 msgstr "Ta bort"
 
-#: src/bildstod/library.py:143
+#: src/library.py:143
 msgid "All Categories"
 msgstr "Alla kategorier"
 
-#: src/bildstod/library.py:257
+#: src/library.py:257
 msgid "Images"
 msgstr "Bilder"
 
-#: src/bildstod/library.py:276
+#: src/library.py:276
 msgid "Add to Library"
 msgstr "Lägg till i bibliotek"
 
-#: src/bildstod/library.py:276
+#: src/library.py:276
 msgid "Enter a label for this image:"
 msgstr "Ange en etikett för denna bild:"
 
-#: src/bildstod/library.py:280
+#: src/library.py:280
 msgid "Activity name"
 msgstr "Aktivitetsnamn"
 
-#: src/bildstod/library.py:307
+#: src/library.py:307
 #, python-format
 msgid "Image imported: %s"
 msgstr "Bild importerad: %s"
 
-#: src/bildstod/library.py:320
+#: src/library.py:320
 #, python-format
 msgid "Image removed: %s"
 msgstr "Bild borttagen: %s"
 
-#: src/bildstod/main.py:66
+#: src/main.py:67
 msgid "Templates"
 msgstr "Mallar"
 
-#: src/bildstod/main.py:68 src/bildstod/main.py:421
+#: src/main.py:69 src/main.py:423
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: src/bildstod/main.py:69
+#: src/main.py:70
 msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
-#: src/bildstod/main.py:70
+#: src/main.py:71
 msgid "About Visual Support"
 msgstr "Om Bildstöd"
 
-#: src/bildstod/main.py:91
-msgid "Schedule"
-msgstr "Schema"
-
-#: src/bildstod/main.py:94
-msgid "Now"
-msgstr "Nu"
-
-#: src/bildstod/main.py:97
+#: src/main.py:92
 msgid "Library"
 msgstr "Bibliotek"
 
-#: src/bildstod/main.py:100
+#: src/main.py:95
+msgid "Schedule"
+msgstr "Schema"
+
+#: src/main.py:98
+msgid "Now"
+msgstr "Nu"
+
+#: src/main.py:101
 msgid "ARASAAC"
 msgstr "ARASAAC"
 
-#: src/bildstod/main.py:112 src/bildstod/main.py:576
+#: src/main.py:113 src/main.py:578
 msgid "Ready"
 msgstr "Redo"
 
-#: src/bildstod/main.py:149
+#: src/main.py:150
 #, python-format
 msgid "Completed: %s"
 msgstr "Färdig: %s"
 
-#: src/bildstod/main.py:158
+#: src/main.py:159
 #, python-format
 msgid "Added to schedule: %s"
 msgstr "Lades till i schemat: %s"
 
-#: src/bildstod/main.py:162
+#: src/main.py:163
 msgid "Schedule Templates"
 msgstr "Schemamallar"
 
-#: src/bildstod/main.py:163
+#: src/main.py:164
 msgid "Load a template or save current schedule as template:"
 msgstr "Läs in en mall eller spara aktuellt schema som mall:"
 
-#: src/bildstod/main.py:175
+#: src/main.py:176
 #, python-format
 msgid "%d activities"
 msgstr "%d aktiviteter"
 
-#: src/bildstod/main.py:184
+#: src/main.py:185
 msgid "Custom"
 msgstr "Anpassad"
 
-#: src/bildstod/main.py:185
+#: src/main.py:186
 #, python-format
 msgid "%d activities (custom)"
 msgstr "%d aktiviteter (anpassad)"
 
-#: src/bildstod/main.py:196
+#: src/main.py:197
 msgid "Save Current as Template"
 msgstr "Spara aktuell som mall"
 
-#: src/bildstod/main.py:197
+#: src/main.py:198
 msgid "Load Selected"
 msgstr "Läs in vald"
 
-#: src/bildstod/main.py:211
+#: src/main.py:212
 #, python-format
 msgid "Template loaded: %s"
 msgstr "Mall inläst: %s"
 
-#: src/bildstod/main.py:217
+#: src/main.py:218
 #, python-format
 msgid "Template saved: %s"
 msgstr "Mall sparad: %s"
 
-#: src/bildstod/main.py:237
+#: src/main.py:238
 msgid "ARASAAC pictograms (https://arasaac.org)"
 msgstr "ARASAAC-piktogram (https://arasaac.org)"
 
-#: src/bildstod/main.py:240
+#: src/main.py:241
 msgid ""
 "Visual schedule and picture support tool with ARASAAC pictogram search for children with autism and language disorders.\n"
 "\n"
@@ -333,19 +328,19 @@ msgstr ""
 "\n"
 "En del av Autismappar-paketet – gratisverktyg för kommunikation och daglig struktur."
 
-#: src/bildstod/main.py:252
+#: src/main.py:253
 msgid "Autismappar"
 msgstr "Autismappar"
 
-#: src/bildstod/main.py:383
+#: src/main.py:385
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: src/bildstod/main.py:389
+#: src/main.py:391
 msgid "Welcome to Visual Support"
 msgstr "Välkommen till Bildstöd"
 
-#: src/bildstod/main.py:391
+#: src/main.py:393
 msgid ""
 "Picture-based communication and scheduling.\n"
 "\n"
@@ -361,176 +356,176 @@ msgstr ""
 "✓ Sök på svenska eller engelska\n"
 "✓ Exportera och dela scheman"
 
-#: src/bildstod/main.py:398
+#: src/main.py:400
 msgid "Get Started"
 msgstr "Kom igång"
 
-#: src/bildstod/main.py:424
+#: src/main.py:426
 msgid "General"
 msgstr "Allmänt"
 
-#: src/bildstod/main.py:428
+#: src/main.py:430
 msgid "Appearance"
 msgstr "Utseende"
 
-#: src/bildstod/main.py:431
+#: src/main.py:433
 msgid "Theme"
 msgstr "Tema"
 
-#: src/bildstod/main.py:432
+#: src/main.py:434
 msgid "Choose light, dark, or follow system"
 msgstr "Välj ljust, mörkt eller följ systemet"
 
-#: src/bildstod/main.py:434
+#: src/main.py:436
 msgid "System"
 msgstr "System"
 
-#: src/bildstod/main.py:434
+#: src/main.py:436
 msgid "Light"
 msgstr "Ljust"
 
-#: src/bildstod/main.py:434
+#: src/main.py:436
 msgid "Dark"
 msgstr "Mörkt"
 
-#: src/bildstod/main.py:442
+#: src/main.py:444
 msgid "Icon Size"
 msgstr "Ikonstorlek"
 
-#: src/bildstod/main.py:443
+#: src/main.py:445
 msgid "Size of pictogram icons"
 msgstr "Storlek för piktogramikoner"
 
-#: src/bildstod/main.py:445
+#: src/main.py:447
 msgid "Small"
 msgstr "Små"
 
-#: src/bildstod/main.py:445
+#: src/main.py:447
 msgid "Medium"
 msgstr "Medel"
 
-#: src/bildstod/main.py:445
+#: src/main.py:447
 msgid "Large"
 msgstr "Stora"
 
-#: src/bildstod/main.py:456
+#: src/main.py:458
 msgid "Speech"
 msgstr "Tal"
 
-#: src/bildstod/main.py:459
+#: src/main.py:461
 msgid "Speech Engine"
 msgstr "Talmotor"
 
-#: src/bildstod/main.py:460
+#: src/main.py:462
 msgid "Piper gives natural voices, espeak is robotic but lightweight"
 msgstr "Piper ger naturliga röster, espeak är robotlik men lättviktig."
 
-#: src/bildstod/main.py:462
+#: src/main.py:464
 msgid "Automatic"
 msgstr "Automatiskt"
 
-#: src/bildstod/main.py:462
+#: src/main.py:464
 msgid "Piper (natural)"
 msgstr "Piper (naturlig)"
 
-#: src/bildstod/main.py:462
+#: src/main.py:464
 msgid "espeak-ng (robotic)"
 msgstr "espeak-ng (robotlik)"
 
-#: src/bildstod/main.py:470
+#: src/main.py:472
 msgid "Speech Speed"
 msgstr "Talhastighet"
 
-#: src/bildstod/main.py:471
+#: src/main.py:473
 msgid "Slower speech can be easier to understand"
 msgstr "Långsammare tal kan vara lättare att förstå"
 
-#: src/bildstod/main.py:486
+#: src/main.py:488
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: src/bildstod/main.py:490
+#: src/main.py:492
 msgid "ARASAAC Cache"
 msgstr "ARASAAC-cache"
 
-#: src/bildstod/main.py:495
+#: src/main.py:497
 msgid "Cached pictograms"
 msgstr "Cachade piktogram"
 
-#: src/bildstod/main.py:497
+#: src/main.py:499
 msgid "Clear"
 msgstr "Töm"
 
-#: src/bildstod/main.py:506
+#: src/main.py:508
 msgid "Notifications"
 msgstr "Aviseringar"
 
-#: src/bildstod/main.py:508
+#: src/main.py:510
 msgid "Activity reminders"
 msgstr "Aktivitetspåminnelser"
 
-#: src/bildstod/main.py:509
+#: src/main.py:511
 msgid "Show notifications before scheduled activities"
 msgstr "Visa aviseringar före schemalagda aktiviteter"
 
-#: src/bildstod/main.py:516
+#: src/main.py:518
 msgid "Developer"
 msgstr "Utvecklare"
 
-#: src/bildstod/main.py:518
+#: src/main.py:520
 msgid "Debug mode"
 msgstr "Felsökningsläge"
 
-#: src/bildstod/main.py:519
+#: src/main.py:521
 msgid "Show extra logging in terminal"
 msgstr "Visa extra loggning i terminal"
 
-#: src/bildstod/main.py:551
+#: src/main.py:553
 msgid "Cleared"
 msgstr "Tömdes"
 
-#: src/bildstod/main.py:573
+#: src/main.py:575
 msgid "Refreshing..."
 msgstr "Uppdaterar..."
 
-#: src/bildstod/now_view.py:43 src/bildstod/now_view.py:45
+#: src/now_view.py:43 src/now_view.py:45
 msgid "No activity"
 msgstr "Ingen aktivitet"
 
-#: src/bildstod/now_view.py:56
+#: src/now_view.py:56
 msgid "Done!"
 msgstr "Klar!"
 
-#: src/bildstod/now_view.py:68
+#: src/now_view.py:68
 msgid "Next:"
 msgstr "Nästa:"
 
-#: src/bildstod/now_view.py:99
+#: src/now_view.py:99
 msgid "All done! 🎉"
 msgstr "Allt klart! 🎉"
 
-#: src/bildstod/now_view.py:168
+#: src/now_view.py:168
 #, python-format
 msgid "Time's up for: %s"
 msgstr "Tiden är slut för: %s"
 
-#: src/bildstod/schedule.py:81 src/bildstod/schedule.py:101
+#: src/schedule.py:81 src/schedule.py:101
 msgid "New Schedule"
 msgstr "Nytt schema"
 
-#: src/bildstod/schedule.py:168
+#: src/schedule.py:168
 msgid "Save Schedule"
 msgstr "Spara schema"
 
-#: src/bildstod/schedule.py:173 src/bildstod/schedule.py:416
+#: src/schedule.py:173 src/schedule.py:416
 msgid "Load Schedule"
 msgstr "Läs in schema"
 
-#: src/bildstod/schedule.py:178 src/bildstod/schedule.py:363
+#: src/schedule.py:178 src/schedule.py:363
 msgid "Add Activity"
 msgstr "Lägg till aktivitet"
 
-#: src/bildstod/schedule.py:222
+#: src/schedule.py:222
 msgid ""
 "No activities yet.\n"
 "Add from the library or click + to add."
@@ -538,133 +533,126 @@ msgstr ""
 "Inga aktiviteter ännu.\n"
 "Lägg till från biblioteket eller klicka + för att lägga till."
 
-#: src/bildstod/schedule.py:305
+#: src/schedule.py:305
 msgid "Time (HH:MM)"
 msgstr "Tid (HH:MM)"
 
-#: src/bildstod/schedule.py:312
+#: src/schedule.py:312
 msgid "Mark as done"
 msgstr "Markera som klar"
 
-#: src/bildstod/schedule.py:318
+#: src/schedule.py:318
 msgid "Remove activity"
 msgstr "Ta bort aktivitet"
 
-#: src/bildstod/schedule.py:355
+#: src/schedule.py:355
 msgid "Library Empty"
 msgstr "Biblioteket är tomt"
 
-#: src/bildstod/schedule.py:356
+#: src/schedule.py:356
 msgid "Add images to the library first."
 msgstr "Lägg först till bilder till biblioteket."
 
-#: src/bildstod/schedule.py:358
+#: src/schedule.py:358
 msgid "OK"
 msgstr "OK"
 
-#: src/bildstod/schedule.py:364
+#: src/schedule.py:364
 msgid "Select an activity from the library:"
 msgstr "Välj en aktivitet från biblioteket:"
 
-#: src/bildstod/schedule.py:409
+#: src/schedule.py:409
 #, python-format
 msgid "Schedule saved: %s"
 msgstr "Schema sparades: %s"
 
-#: src/bildstod/schedule.py:412
+#: src/schedule.py:412
 #, python-format
 msgid "Error saving: %s"
 msgstr "Fel vid sparning: %s"
 
-#: src/bildstod/schedule.py:419
+#: src/schedule.py:419
 msgid "Schedule files"
 msgstr "Schemafiler"
 
-#: src/bildstod/schedule.py:438
+#: src/schedule.py:438
 #, python-format
 msgid "Schedule loaded: %s"
 msgstr "Schema inläst: %s"
 
-#: src/bildstod/schedule.py:441
+#: src/schedule.py:441
 #, python-format
 msgid "Error loading: %s"
 msgstr "Fel vid inläsning: %s"
 
-#: src/bildstod/templates.py:76
+#: src/templates.py:76
 msgid "School Day"
 msgstr "Skoldag"
 
-#: src/bildstod/templates.py:78 src/bildstod/templates.py:97
-#: src/bildstod/templates.py:113
+#: src/templates.py:78 src/templates.py:97 src/templates.py:113
 msgid "Wake up"
 msgstr "Vakna"
 
-#: src/bildstod/templates.py:79 src/bildstod/templates.py:98
-#: src/bildstod/templates.py:114
+#: src/templates.py:79 src/templates.py:98 src/templates.py:114
 msgid "Breakfast"
 msgstr "Frukost"
 
-#: src/bildstod/templates.py:80 src/bildstod/templates.py:99
-#: src/bildstod/templates.py:115
+#: src/templates.py:80 src/templates.py:99 src/templates.py:115
 msgid "Get dressed"
 msgstr "Klä på sig"
 
-#: src/bildstod/templates.py:81 src/bildstod/templates.py:90
+#: src/templates.py:81 src/templates.py:90
 msgid "Brush teeth"
 msgstr "Borsta tänder"
 
-#: src/bildstod/templates.py:82
+#: src/templates.py:82
 msgid "Go to school"
 msgstr "Gå till skolan"
 
-#: src/bildstod/templates.py:84 src/bildstod/templates.py:101
-#: src/bildstod/templates.py:117
+#: src/templates.py:84 src/templates.py:101 src/templates.py:117
 msgid "Lunch"
 msgstr "Lunch"
 
-#: src/bildstod/templates.py:85
+#: src/templates.py:85
 msgid "Come home"
 msgstr "Komma hem"
 
-#: src/bildstod/templates.py:86 src/bildstod/templates.py:104
+#: src/templates.py:86 src/templates.py:104
 msgid "Snack"
 msgstr "Mellanmål"
 
-#: src/bildstod/templates.py:88 src/bildstod/templates.py:105
-#: src/bildstod/templates.py:120
+#: src/templates.py:88 src/templates.py:105 src/templates.py:120
 msgid "Dinner"
 msgstr "Middag"
 
-#: src/bildstod/templates.py:89 src/bildstod/templates.py:106
-#: src/bildstod/templates.py:121
+#: src/templates.py:89 src/templates.py:106 src/templates.py:121
 msgid "Evening routine"
 msgstr "Kvällsrutin"
 
-#: src/bildstod/templates.py:91 src/bildstod/templates.py:107
-#: src/bildstod/templates.py:122
+#: src/templates.py:91 src/templates.py:107 src/templates.py:122
 msgid "Bedtime"
 msgstr "Läggdags"
 
-#: src/bildstod/templates.py:95
+#: src/templates.py:95
 msgid "Weekend"
 msgstr "Helg"
 
-#: src/bildstod/templates.py:111
+#: src/templates.py:111
 msgid "Holiday"
 msgstr "Semester"
 
-#: src/bildstod/timer.py:44 src/bildstod/timer.py:69 src/bildstod/timer.py:140
+#: src/timer.py:44 src/timer.py:69 src/timer.py:140
 msgid "Pause"
 msgstr "Paus"
 
-#: src/bildstod/timer.py:50
+#: src/timer.py:50
 msgid "Skip"
 msgstr "Hoppa över"
 
-#: src/bildstod/timer.py:136
+#: src/timer.py:136
 msgid "Resume"
 msgstr "Återuppta"
 
-#: src/bildstod/timer.py:163
+#: src/timer.py:163
 msgid "Timer finished!"
 msgstr "Timern är färdig!"
