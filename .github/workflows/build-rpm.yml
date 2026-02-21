@@ -37,7 +37,7 @@ jobs:
 
           PKG=bildstod-$VER
           mkdir -p $PKG
-          cp -r src/ data/ LICENSE README.md pyproject.toml $PKG/ 2>/dev/null || true
+          cp -r src/ data/ po/ LICENSE README.md pyproject.toml $PKG/ 2>/dev/null || true
           tar czf ~/rpmbuild/SOURCES/$PKG.tar.gz $PKG
 
           cat > ~/rpmbuild/SPECS/bildstod.spec << SPECEOF
@@ -60,9 +60,12 @@ jobs:
           %install
           mkdir -p \$RPM_BUILD_ROOT/usr/share/bildstod/bildstod
           cp src/bildstod/*.py \$RPM_BUILD_ROOT/usr/share/bildstod/bildstod/
-          if [ -d src/bildstod/locale ]; then
-            cp -r src/bildstod/locale \$RPM_BUILD_ROOT/usr/share/bildstod/bildstod/
-          fi
+          for po in po/*.po; do
+            [ -f "\$po" ] || continue
+            lang=\$(basename "\$po" .po)
+            mkdir -p \$RPM_BUILD_ROOT/usr/share/locale/\$lang/LC_MESSAGES
+            msgfmt -o \$RPM_BUILD_ROOT/usr/share/locale/\$lang/LC_MESSAGES/bildstod.mo "\$po"
+          done
 
           mkdir -p \$RPM_BUILD_ROOT/usr/bin
           cat > \$RPM_BUILD_ROOT/usr/bin/bildstod << 'LAUNCHER'
@@ -82,6 +85,7 @@ jobs:
           %doc README.md
           /usr/bin/bildstod
           /usr/share/bildstod/
+          /usr/share/locale/*/LC_MESSAGES/bildstod.mo
           /usr/share/applications/*.desktop
           /usr/share/icons/hicolor/scalable/apps/*.svg
 
