@@ -1,5 +1,12 @@
 # 🖼️ Bildstöd
 
+
+## Screenshots
+
+| English | Svenska |
+|---------|---------|
+| ![English](screenshots/bildstod_en.png) | ![Svenska](screenshots/bildstod_sv.png) |
+
 **Visual schedule and picture support tool with ARASAAC integration**
 
 Part of the [Autismappar](https://www.autismappar.se) suite — free, open-source tools for communication and daily structure for children with autism and language disorders.
