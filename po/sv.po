@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 15:09+0100\n"
+"POT-Creation-Date: 2026-02-21 15:17+0100\n"
 "PO-Revision-Date: 2026-02-16 16:18+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304855/sv/)\n"
@@ -66,6 +66,10 @@ msgstr "Lade till: %s"
 #: src/bildstod/arasaac.py:360
 msgid "Error"
 msgstr "Fel"
+
+#: src/bildstod/export.py:14 src/bildstod/main.py:40 src/bildstod/main.py:226
+msgid "Visual Support"
+msgstr "Bildstöd"
 
 #: src/bildstod/export.py:30
 msgid "Time"
@@ -228,10 +232,6 @@ msgstr "Bild importerad: %s"
 #, python-format
 msgid "Image removed: %s"
 msgstr "Bild borttagen: %s"
-
-#: src/bildstod/main.py:40 src/bildstod/main.py:226
-msgid "Visual Support"
-msgstr "Bildstöd"
 
 #: src/bildstod/main.py:66
 msgid "Templates"
