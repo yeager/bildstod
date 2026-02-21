@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bildstod"
-version = "0.4.3"
+version = "0.4.4"
 description = "Visual schedule and picture support tool with ARASAAC integration"
 authors = [{name = "Daniel Nylander", email = "daniel@danielnylander.se"}]
 license = "GPL-3.0-or-later"
