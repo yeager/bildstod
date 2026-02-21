@@ -103,6 +103,10 @@ class MainWindow(Adw.ApplicationWindow):
 
         main_box.append(self.view_stack)
 
+        # Show Library tab by default if schedule is empty
+        if not self.schedule_view.schedule.items:
+            self.view_stack.set_visible_child_name("library")
+
         # Status bar
         status_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
         status_box.set_margin_start(12)
