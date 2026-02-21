@@ -27,6 +27,7 @@ from bildstod.now_view import NowView
 from bildstod.templates import (
     get_builtin_templates, list_user_templates,
     template_to_schedule, save_as_template,
+    prefetch_template_images,
 )
 from bildstod.export import show_export_dialog
 
@@ -40,6 +41,9 @@ class MainWindow(Adw.ApplicationWindow):
 
         # Initialize data
         self.library = PictureLibrary()
+
+        # Pre-download ARASAAC images used by built-in templates
+        prefetch_template_images()
 
         # Main layout
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -205,10 +209,17 @@ class MainWindow(Adw.ApplicationWindow):
                 schedule = template_to_schedule(selected._template)
                 self.schedule_view.load_schedule(schedule)
                 self._set_status(_("Template loaded: %s") % schedule.name)
+                # Refresh after a short delay to show images downloaded in background
+                GLib.timeout_add(2000, self._refresh_after_template)
         elif response == "save":
             schedule = self.schedule_view.schedule
             path = save_as_template(schedule)
             self._set_status(_("Template saved: %s") % path.name)
+
+    def _refresh_after_template(self):
+        """Refresh schedule view after template images have downloaded."""
+        self.schedule_view.refresh()
+        return False  # Don't repeat
 
     def show_about(self, action, param):
         about = Adw.AboutDialog(
