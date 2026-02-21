@@ -1,8 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=Bildstöd
+Name=Visual Support
+Name[sv]=Bildstöd
 GenericName=Visual Schedule Tool
 Comment=Visual schedule and picture support tool
+Comment[sv]=Visuellt schema och bildstödsverktyg
 Exec=bildstod
 Icon=se.danielnylander.bildstod
 Terminal=false
