@@ -11,7 +11,7 @@ _ = gettext.gettext
 
 from bildstod import __version__
 
-APP_LABEL = "Bildstöd"
+APP_LABEL = _("Visual Support")
 AUTHOR = "Daniel Nylander"
 WEBSITE = "www.autismappar.se"
 

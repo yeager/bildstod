@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-21 15:09+0100\n"
+"POT-Creation-Date: 2026-02-21 15:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,6 +61,10 @@ msgstr ""
 
 #: src/bildstod/arasaac.py:360
 msgid "Error"
+msgstr ""
+
+#: src/bildstod/export.py:14 src/bildstod/main.py:40 src/bildstod/main.py:226
+msgid "Visual Support"
 msgstr ""
 
 #: src/bildstod/export.py:30
@@ -223,10 +227,6 @@ msgstr ""
 #: src/bildstod/library.py:320
 #, python-format
 msgid "Image removed: %s"
-msgstr ""
-
-#: src/bildstod/main.py:40 src/bildstod/main.py:226
-msgid "Visual Support"
 msgstr ""
 
 #: src/bildstod/main.py:66
