@@ -1,6 +1,7 @@
 name: Build .deb
 
 on:
+  workflow_dispatch:
   push:
     tags: ['v*']
 
@@ -15,14 +16,6 @@ jobs:
 
       - name: Install build dependencies
         run: sudo apt-get install -y gettext dpkg-dev
-
-      - name: Pull translations
-        env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
-        run: |
-          curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
-          sudo mv tx /usr/local/bin/
-          tx pull -a --force --minimum-perc 10 || true
 
       - name: Compile translations
         run: |
