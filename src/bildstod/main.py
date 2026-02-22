@@ -418,7 +418,7 @@ class Application(Adw.Application):
         _save_settings(self.settings)
         dialog.close()
 
-    def _on_preferences(self, *_):
+    def _on_preferences(self, *_args):
         prefs = Adw.PreferencesDialog()
         prefs.set_title(_("Preferences"))
 
