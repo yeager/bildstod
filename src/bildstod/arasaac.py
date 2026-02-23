@@ -50,49 +50,35 @@ def _load_json_data(filename: str) -> dict:
     return {}
 
 
-# Lazy-loaded Swedish lookups
-_sv_lookup = None   # {sv_term: [picto_id, ...]}
-_en2sv = None       # {en_term: sv_term}
-
-
-def _get_sv_lookup():
-    global _sv_lookup
-    if _sv_lookup is None:
-        _sv_lookup = _load_json_data("arasaac_sv.json")
-    return _sv_lookup
+# Lazy-loaded Swedish ordlista
+_en2sv = None      # {en_term: sv_term}
+_sv2en = None      # {sv_term: [en_terms]}
 
 
 def _get_en2sv():
+    """Load English → Swedish ordlista."""
     global _en2sv
     if _en2sv is None:
         _en2sv = _load_json_data("arasaac_en2sv.json")
     return _en2sv
 
 
-def search_pictograms_sv(keyword):
-    """Search Swedish keyword locally. Returns list of dicts with _id."""
-    lookup = _get_sv_lookup()
-    term = keyword.lower().strip()
-    ids = []
-    # Exact match first
-    if term in lookup:
-        ids = lookup[term]
-    else:
-        # Prefix match
-        for sv_term, picto_ids in lookup.items():
-            if sv_term.startswith(term):
-                ids.extend(picto_ids)
-            if len(ids) >= 60:
-                break
-    return [{"_id": pid, "keywords": [{"keyword": keyword, "locale": "sv"}]}
-            for pid in ids[:60]]
+def _get_sv2en():
+    """Load Swedish → English reverse lookup."""
+    global _sv2en
+    if _sv2en is None:
+        en2sv = _get_en2sv()
+        sv2en = {}
+        for en_term, sv_term in en2sv.items():
+            if sv_term not in sv2en:
+                sv2en[sv_term] = []
+            sv2en[sv_term].append(en_term)
+        _sv2en = sv2en
+    return _sv2en
 
 
-def search_pictograms(keyword, lang="sv"):
-    """Search ARASAAC. For Swedish, uses local lookup. For others, uses API."""
-    if lang == "sv":
-        return search_pictograms_sv(keyword)
-
+def _api_search(keyword, lang="en"):
+    """Search ARASAAC API and return results."""
     encoded = __import__('urllib.parse', fromlist=['quote']).quote(keyword)
     url = f"{API_BASE}/pictograms/{lang}/search/{encoded}"
     try:
@@ -104,6 +90,64 @@ def search_pictograms(keyword, lang="sv"):
     except Exception:
         pass
     return []
+
+
+def search_pictograms_sv(keyword):
+    """Search Swedish keyword using intelligent strategy."""
+    sv_term = keyword.lower().strip()
+    results = []
+    seen_ids = set()
+    
+    # Strategy 1: Try Swedish directly
+    swedish_results = _api_search(keyword, lang="sv")
+    for result in swedish_results[:30]:  # Limit Swedish results
+        picto_id = result.get("_id")
+        if picto_id and picto_id not in seen_ids:
+            seen_ids.add(picto_id)
+            result["swedish_keyword"] = keyword
+            results.append(result)
+    
+    # Strategy 2: Find English equivalents
+    sv2en = _get_sv2en()
+    if sv_term in sv2en:
+        english_terms = sv2en[sv_term]
+        for en_term in english_terms[:3]:  # Limit English terms
+            english_results = _api_search(en_term, lang="en")
+            for result in english_results[:10]:  # Limit per English term
+                picto_id = result.get("_id")
+                if picto_id and picto_id not in seen_ids:
+                    seen_ids.add(picto_id)
+                    result["swedish_keyword"] = keyword
+                    results.append(result)
+                
+                if len(results) >= 60:
+                    break
+            if len(results) >= 60:
+                break
+    
+    return results[:60]
+
+
+def search_pictograms(keyword, lang="sv"):
+    """Search ARASAAC. For Swedish, uses intelligent strategy. For others, uses API."""
+    if lang == "sv":
+        return search_pictograms_sv(keyword)
+    
+    results = _api_search(keyword, lang=lang)
+    
+    # Add Swedish keywords where available
+    if lang == "en":
+        en2sv = _get_en2sv()
+        for result in results:
+            # Find best English keyword to translate
+            for kw in result.get("keywords", []):
+                if kw.get("locale") == "en":
+                    en_keyword = kw.get("keyword", "").lower()
+                    if en_keyword in en2sv:
+                        result["swedish_keyword"] = en2sv[en_keyword]
+                        break
+    
+    return results
 
 
 def get_image_url(pictogram_id, size=500):
@@ -128,20 +172,29 @@ def download_image(pictogram_id, dest_dir=None, size=500):
 
 
 def get_best_keyword(pictogram, lang="sv"):
-    """Extract the best keyword. Prefers Swedish via local lookup."""
+    """Extract the best keyword. Prefers Swedish labels."""
+    # Check if we have a Swedish keyword from search
+    if "swedish_keyword" in pictogram:
+        return pictogram["swedish_keyword"]
+    
+    # Try to find Swedish keyword in pictogram data
     for kw in pictogram.get("keywords", []):
-        if kw.get("locale") == lang:
+        if kw.get("locale") == "sv":
             return kw.get("keyword", "")
+    
     # Try translating English keyword to Swedish
     en2sv = _get_en2sv()
     for kw in pictogram.get("keywords", []):
-        en_word = kw.get("keyword", "").lower()
-        if en_word in en2sv:
-            return en2sv[en_word]
-    # Fallback
+        if kw.get("locale") == "en":
+            en_word = kw.get("keyword", "").lower()
+            if en_word in en2sv:
+                return en2sv[en_word]
+    
+    # Fallback to any keyword
     keywords = pictogram.get("keywords", [])
     if keywords:
         return keywords[0].get("keyword", "")
+    
     return str(pictogram.get("_id", ""))
 
 
