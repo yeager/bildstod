@@ -1,5 +1,6 @@
 [Desktop Entry]
 Type=Application
+StartupWMClass=se.danielnylander.bildstod
 Name=Visual Support
 Name[sv]=Bildstöd
 GenericName=Visual Schedule Tool
