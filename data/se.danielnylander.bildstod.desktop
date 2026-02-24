@@ -9,6 +9,6 @@ Comment[sv]=Visuellt schema och bildstödsverktyg
 Exec=bildstod
 Icon=se.danielnylander.bildstod
 Terminal=false
-Categories=Utility;Accessibility;
+Categories=Utility;Accessibility;Autismappar
 StartupNotify=true
 Keywords=visual;schedule;picture;accessibility;
