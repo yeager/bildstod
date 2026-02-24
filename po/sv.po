@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bildstod\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-22 17:03+0100\n"
+"POT-Creation-Date: 2026-02-23 11:03+0100\n"
 "PO-Revision-Date: 2026-02-16 16:18+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304855/sv/)\n"
@@ -21,53 +21,53 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/bildstod/arasaac.py:166
+#: src/bildstod/arasaac.py:219
 msgid "Search pictograms (Swedish or English)..."
 msgstr "Sök efter piktogram (svenska eller engelska)..."
 
-#: src/bildstod/arasaac.py:196
+#: src/bildstod/arasaac.py:249
 msgid "Search for pictograms to add to your library."
 msgstr "Sök efter piktogram att lägga till i ditt bibliotek."
 
-#: src/bildstod/arasaac.py:236
+#: src/bildstod/arasaac.py:289
 msgid "Searching..."
 msgstr "Söker..."
 
-#: src/bildstod/arasaac.py:255
+#: src/bildstod/arasaac.py:308
 #, python-format
 msgid "No pictograms found for '%s'."
 msgstr "Inga piktogram hittades för '%s'."
 
-#: src/bildstod/arasaac.py:259
+#: src/bildstod/arasaac.py:312
 #, python-format
 msgid "%d pictograms found"
 msgstr "%d piktogram hittades"
 
-#: src/bildstod/arasaac.py:267
+#: src/bildstod/arasaac.py:320
 #, python-format
 msgid "ARASAAC: %d results for '%s'"
 msgstr "ARASAAC: %d resultat för '%s'"
 
-#: src/bildstod/arasaac.py:285 src/bildstod/library.py:286
+#: src/bildstod/arasaac.py:338 src/bildstod/library.py:286
 #: src/bildstod/schedule.py:386
 msgid "Add"
 msgstr "Lägg till"
 
-#: src/bildstod/arasaac.py:328
+#: src/bildstod/arasaac.py:381
 msgid "Adding..."
 msgstr "Lägger till..."
 
-#: src/bildstod/arasaac.py:358 src/bildstod/schedule.py:346
+#: src/bildstod/arasaac.py:411 src/bildstod/schedule.py:346
 #: src/bildstod/schedule.py:403
 #, python-format
 msgid "Added: %s"
 msgstr "Lade till: %s"
 
-#: src/bildstod/arasaac.py:360
+#: src/bildstod/arasaac.py:413
 msgid "Error"
 msgstr "Fel"
 
-#: src/bildstod/export.py:14 src/bildstod/main.py:42 src/bildstod/main.py:228
+#: src/bildstod/export.py:14 src/bildstod/main.py:41 src/bildstod/main.py:241
 msgid "Visual Support"
 msgstr "Bildstöd"
 
@@ -104,7 +104,7 @@ msgstr "Nej"
 msgid "%d minutes"
 msgstr "%d minuter"
 
-#: src/bildstod/export.py:159 src/bildstod/main.py:69
+#: src/bildstod/export.py:159 src/bildstod/main.py:82
 msgid "Export Schedule"
 msgstr "Exportera schema"
 
@@ -113,7 +113,7 @@ msgid "Choose export format:"
 msgstr "Välj exportformat:"
 
 #: src/bildstod/export.py:163 src/bildstod/library.py:285
-#: src/bildstod/main.py:197 src/bildstod/schedule.py:385
+#: src/bildstod/main.py:210 src/bildstod/schedule.py:385
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -233,97 +233,101 @@ msgstr "Bild importerad: %s"
 msgid "Image removed: %s"
 msgstr "Bild borttagen: %s"
 
-#: src/bildstod/main.py:68
+#: src/bildstod/main.py:65
+msgid "Bildstod"
+msgstr "Bildstöd"
+
+#: src/bildstod/main.py:81
 msgid "Templates"
 msgstr "Mallar"
 
-#: src/bildstod/main.py:70 src/bildstod/main.py:424
+#: src/bildstod/main.py:83 src/bildstod/main.py:481
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: src/bildstod/main.py:71
+#: src/bildstod/main.py:84
 msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
-#: src/bildstod/main.py:72
+#: src/bildstod/main.py:85
 msgid "About Visual Support"
 msgstr "Om Bildstöd"
 
-#: src/bildstod/main.py:93
+#: src/bildstod/main.py:106
 msgid "Library"
 msgstr "Bibliotek"
 
-#: src/bildstod/main.py:96
+#: src/bildstod/main.py:109
 msgid "Schedule"
 msgstr "Schema"
 
-#: src/bildstod/main.py:99
+#: src/bildstod/main.py:112
 msgid "Now"
 msgstr "Nu"
 
-#: src/bildstod/main.py:102
+#: src/bildstod/main.py:115
 msgid "ARASAAC"
 msgstr "ARASAAC"
 
-#: src/bildstod/main.py:114 src/bildstod/main.py:579
+#: src/bildstod/main.py:127 src/bildstod/main.py:636
 msgid "Ready"
 msgstr "Redo"
 
-#: src/bildstod/main.py:151
+#: src/bildstod/main.py:164
 #, python-format
 msgid "Completed: %s"
 msgstr "Färdig: %s"
 
-#: src/bildstod/main.py:160
+#: src/bildstod/main.py:173
 #, python-format
 msgid "Added to schedule: %s"
 msgstr "Lades till i schemat: %s"
 
-#: src/bildstod/main.py:164
+#: src/bildstod/main.py:177
 msgid "Schedule Templates"
 msgstr "Schemamallar"
 
-#: src/bildstod/main.py:165
+#: src/bildstod/main.py:178
 msgid "Load a template or save current schedule as template:"
 msgstr "Läs in en mall eller spara aktuellt schema som mall:"
 
-#: src/bildstod/main.py:177
+#: src/bildstod/main.py:190
 #, python-format
 msgid "%d activities"
 msgstr "%d aktiviteter"
 
-#: src/bildstod/main.py:186
+#: src/bildstod/main.py:199
 msgid "Custom"
 msgstr "Anpassad"
 
-#: src/bildstod/main.py:187
+#: src/bildstod/main.py:200
 #, python-format
 msgid "%d activities (custom)"
 msgstr "%d aktiviteter (anpassad)"
 
-#: src/bildstod/main.py:198
+#: src/bildstod/main.py:211
 msgid "Save Current as Template"
 msgstr "Spara aktuell som mall"
 
-#: src/bildstod/main.py:199
+#: src/bildstod/main.py:212
 msgid "Load Selected"
 msgstr "Läs in vald"
 
-#: src/bildstod/main.py:213
+#: src/bildstod/main.py:226
 #, python-format
 msgid "Template loaded: %s"
 msgstr "Mall inläst: %s"
 
-#: src/bildstod/main.py:219
+#: src/bildstod/main.py:232
 #, python-format
 msgid "Template saved: %s"
 msgstr "Mall sparad: %s"
 
-#: src/bildstod/main.py:239
+#: src/bildstod/main.py:251
 msgid "ARASAAC pictograms (https://arasaac.org)"
 msgstr "ARASAAC-piktogram (https://arasaac.org)"
 
-#: src/bildstod/main.py:242
+#: src/bildstod/main.py:254
 msgid ""
 "Visual schedule and picture support tool with ARASAAC pictogram search for children with autism and language disorders.\n"
 "\n"
@@ -333,19 +337,23 @@ msgstr ""
 "\n"
 "En del av Autismappar-paketet – gratisverktyg för kommunikation och daglig struktur."
 
-#: src/bildstod/main.py:254
-msgid "Autismappar"
-msgstr "Autismappar"
+#: src/bildstod/main.py:266
+msgid "Thanks to"
+msgstr "Tack till"
 
-#: src/bildstod/main.py:386
+#: src/bildstod/main.py:385
+msgid "🎉 Du hittade hemligheten!"
+msgstr "🎉 Du hittade hemligheten!"
+
+#: src/bildstod/main.py:443
 msgid "Welcome"
 msgstr "Välkommen"
 
-#: src/bildstod/main.py:392
+#: src/bildstod/main.py:449
 msgid "Welcome to Visual Support"
 msgstr "Välkommen till Bildstöd"
 
-#: src/bildstod/main.py:394
+#: src/bildstod/main.py:451
 msgid ""
 "Picture-based communication and scheduling.\n"
 "\n"
@@ -361,135 +369,135 @@ msgstr ""
 "✓ Sök på svenska eller engelska\n"
 "✓ Exportera och dela scheman"
 
-#: src/bildstod/main.py:401
+#: src/bildstod/main.py:458
 msgid "Get Started"
 msgstr "Kom igång"
 
-#: src/bildstod/main.py:427
+#: src/bildstod/main.py:484
 msgid "General"
 msgstr "Allmänt"
 
-#: src/bildstod/main.py:431
+#: src/bildstod/main.py:488
 msgid "Appearance"
 msgstr "Utseende"
 
-#: src/bildstod/main.py:434
+#: src/bildstod/main.py:491
 msgid "Theme"
 msgstr "Tema"
 
-#: src/bildstod/main.py:435
+#: src/bildstod/main.py:492
 msgid "Choose light, dark, or follow system"
 msgstr "Välj ljust, mörkt eller följ systemet"
 
-#: src/bildstod/main.py:437
+#: src/bildstod/main.py:494
 msgid "System"
 msgstr "System"
 
-#: src/bildstod/main.py:437
+#: src/bildstod/main.py:494
 msgid "Light"
 msgstr "Ljust"
 
-#: src/bildstod/main.py:437
+#: src/bildstod/main.py:494
 msgid "Dark"
 msgstr "Mörkt"
 
-#: src/bildstod/main.py:445
+#: src/bildstod/main.py:502
 msgid "Icon Size"
 msgstr "Ikonstorlek"
 
-#: src/bildstod/main.py:446
+#: src/bildstod/main.py:503
 msgid "Size of pictogram icons"
 msgstr "Storlek för piktogramikoner"
 
-#: src/bildstod/main.py:448
+#: src/bildstod/main.py:505
 msgid "Small"
 msgstr "Små"
 
-#: src/bildstod/main.py:448
+#: src/bildstod/main.py:505
 msgid "Medium"
 msgstr "Medel"
 
-#: src/bildstod/main.py:448
+#: src/bildstod/main.py:505
 msgid "Large"
 msgstr "Stora"
 
-#: src/bildstod/main.py:459
+#: src/bildstod/main.py:516
 msgid "Speech"
 msgstr "Tal"
 
-#: src/bildstod/main.py:462
+#: src/bildstod/main.py:519
 msgid "Speech Engine"
 msgstr "Talmotor"
 
-#: src/bildstod/main.py:463
+#: src/bildstod/main.py:520
 msgid "Piper gives natural voices, espeak is robotic but lightweight"
 msgstr "Piper ger naturliga röster, espeak är robotlik men lättviktig."
 
-#: src/bildstod/main.py:465
+#: src/bildstod/main.py:522
 msgid "Automatic"
 msgstr "Automatiskt"
 
-#: src/bildstod/main.py:465
+#: src/bildstod/main.py:522
 msgid "Piper (natural)"
 msgstr "Piper (naturlig)"
 
-#: src/bildstod/main.py:465
+#: src/bildstod/main.py:522
 msgid "espeak-ng (robotic)"
 msgstr "espeak-ng (robotlik)"
 
-#: src/bildstod/main.py:473
+#: src/bildstod/main.py:530
 msgid "Speech Speed"
 msgstr "Talhastighet"
 
-#: src/bildstod/main.py:474
+#: src/bildstod/main.py:531
 msgid "Slower speech can be easier to understand"
 msgstr "Långsammare tal kan vara lättare att förstå"
 
-#: src/bildstod/main.py:489
+#: src/bildstod/main.py:546
 msgid "Advanced"
 msgstr "Avancerat"
 
-#: src/bildstod/main.py:493
+#: src/bildstod/main.py:550
 msgid "ARASAAC Cache"
 msgstr "ARASAAC-cache"
 
-#: src/bildstod/main.py:498
+#: src/bildstod/main.py:555
 msgid "Cached pictograms"
 msgstr "Cachade piktogram"
 
-#: src/bildstod/main.py:500
+#: src/bildstod/main.py:557
 msgid "Clear"
 msgstr "Töm"
 
-#: src/bildstod/main.py:509
+#: src/bildstod/main.py:566
 msgid "Notifications"
 msgstr "Aviseringar"
 
-#: src/bildstod/main.py:511
+#: src/bildstod/main.py:568
 msgid "Activity reminders"
 msgstr "Aktivitetspåminnelser"
 
-#: src/bildstod/main.py:512
+#: src/bildstod/main.py:569
 msgid "Show notifications before scheduled activities"
 msgstr "Visa aviseringar före schemalagda aktiviteter"
 
-#: src/bildstod/main.py:519
+#: src/bildstod/main.py:576
 msgid "Developer"
 msgstr "Utvecklare"
 
-#: src/bildstod/main.py:521
+#: src/bildstod/main.py:578
 msgid "Debug mode"
 msgstr "Felsökningsläge"
 
-#: src/bildstod/main.py:522
+#: src/bildstod/main.py:579
 msgid "Show extra logging in terminal"
 msgstr "Visa extra loggning i terminal"
 
-#: src/bildstod/main.py:554
+#: src/bildstod/main.py:611
 msgid "Cleared"
 msgstr "Tömdes"
 
-#: src/bildstod/main.py:576
+#: src/bildstod/main.py:633
 msgid "Refreshing..."
 msgstr "Uppdaterar..."
 
