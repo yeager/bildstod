@@ -333,21 +333,6 @@ class MainWindow(Adw.ApplicationWindow):
         shortcuts.set_transient_for(self)
         shortcuts.present()
 
-CONFIG_DIR = Path(GLib.get_user_config_dir()) / "bildstod"
-
-def _load_settings():
-    path = CONFIG_DIR / "settings.json"
-    if path.exists():
-        try:
-            return json.loads(path.read_text())
-        except (json.JSONDecodeError, OSError):
-            pass
-    return {}
-
-def _save_settings(settings):
-    CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-    (CONFIG_DIR / "settings.json").write_text(
-        json.dumps(settings, indent=2, ensure_ascii=False))
     def _on_icon_clicked(self, *args):
         """Handle clicks on app icon for easter egg."""
         self._egg_clicks += 1
@@ -367,31 +352,40 @@ def _save_settings(settings):
     def _trigger_easter_egg(self):
         """Show the secret easter egg!"""
         try:
-            # Play a fun sound
             import subprocess
-            subprocess.Popen(['paplay', '/usr/share/sounds/freedesktop/stereo/complete.oga'], 
+            subprocess.Popen(['paplay', '/usr/share/sounds/freedesktop/stereo/complete.oga'],
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except:
-            # Fallback beep
             try:
-                subprocess.Popen(['pactl', 'play-sample', 'bell'], 
+                subprocess.Popen(['pactl', 'play-sample', 'bell'],
                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             except:
                 pass
-
-        # Show confetti message
         toast = Adw.Toast.new(_("🎉 Du hittade hemligheten!"))
         toast.set_timeout(3)
-        
-        # Create toast overlay if it doesn't exist
         if not hasattr(self, '_toast_overlay'):
             content = self.get_content()
             self._toast_overlay = Adw.ToastOverlay()
             self._toast_overlay.set_child(content)
             self.set_content(self._toast_overlay)
-        
         self._toast_overlay.add_toast(toast)
 
+
+CONFIG_DIR = Path(GLib.get_user_config_dir()) / "bildstod"
+
+def _load_settings():
+    path = CONFIG_DIR / "settings.json"
+    if path.exists():
+        try:
+            return json.loads(path.read_text())
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {}
+
+def _save_settings(settings):
+    CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+    (CONFIG_DIR / "settings.json").write_text(
+        json.dumps(settings, indent=2, ensure_ascii=False))
 
 
 class Application(Adw.Application):

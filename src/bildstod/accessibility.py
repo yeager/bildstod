@@ -64,3 +64,22 @@ class AccessibilityManager:
         else:
             self._window.remove_css_class('high-contrast')
         self._apply_css()
+
+
+def apply_large_text():
+    """Apply large text CSS for accessibility. Called at app startup."""
+    try:
+        display = Gdk.Display.get_default()
+        if display is None:
+            return
+        provider = Gtk.CssProvider()
+        provider.load_from_string("""
+            * {
+                font-size: max(16px, 1em);
+            }
+        """)
+        Gtk.StyleContext.add_provider_for_display(
+            display, provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION - 1
+        )
+    except Exception:
+        pass
