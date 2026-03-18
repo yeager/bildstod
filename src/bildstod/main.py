@@ -47,6 +47,9 @@ class MainWindow(Adw.ApplicationWindow):
 
         # Initialize data
         self.library = PictureLibrary()
+        
+        # Initialize offline cache and connectivity monitoring
+        self._init_offline_support()
 
         # Pre-download ARASAAC images used by built-in templates
         prefetch_template_images()
@@ -73,6 +76,15 @@ class MainWindow(Adw.ApplicationWindow):
         view_switcher.set_stack(self.view_stack)
         view_switcher.set_policy(Adw.ViewSwitcherPolicy.WIDE)
         header.set_title_widget(view_switcher)
+
+        # Offline status indicator
+        self.offline_indicator = Gtk.Button()
+        self.offline_indicator.set_icon_name("network-offline-symbolic")
+        self.offline_indicator.add_css_class("flat")
+        self.offline_indicator.set_tooltip_text(_("Offline mode - cached content only"))
+        self.offline_indicator.set_visible(False)
+        self.offline_indicator.connect("clicked", self._on_offline_clicked)
+        header.pack_end(self.offline_indicator)
 
         # Menu button
         menu_btn = Gtk.MenuButton()
@@ -369,6 +381,88 @@ class MainWindow(Adw.ApplicationWindow):
             self._toast_overlay.set_child(content)
             self.set_content(self._toast_overlay)
         self._toast_overlay.add_toast(toast)
+    
+    def _init_offline_support(self):
+        """Initialize offline cache and connectivity monitoring."""
+        try:
+            from bildstod.offline_cache import get_cache
+            self.cache = get_cache()
+            
+            # Check connectivity periodically
+            GLib.timeout_add_seconds(30, self._check_connectivity)
+            self._check_connectivity()  # Initial check
+        except ImportError:
+            self.cache = None
+    
+    def _check_connectivity(self):
+        """Check internet connectivity and update UI."""
+        if self.cache is None:
+            return True
+        
+        is_online = self.cache.is_online()
+        if is_online is False:
+            self.offline_indicator.set_visible(True)
+            self._set_status(_("Offline mode - using cached content"))
+        else:
+            self.offline_indicator.set_visible(False)
+        
+        return True  # Continue periodic checks
+    
+    def _on_offline_clicked(self, btn):
+        """Show offline mode info and cache management."""
+        if self.cache is None:
+            return
+        
+        stats = self.cache.get_cache_stats()
+        
+        dialog = Adw.MessageDialog.new(self)
+        dialog.set_heading(_("Offline Mode"))
+        
+        if stats["online"] is False:
+            dialog.set_body(
+                _("No internet connection available.\n\n"
+                  "Cached pictograms: {cached}\n"
+                  "Cache size: {size} MB\n\n"
+                  "You can still use previously downloaded pictograms.")
+                .format(
+                    cached=stats["cached_pictograms"],
+                    size=stats["total_size_mb"]
+                )
+            )
+        else:
+            dialog.set_body(
+                _("Connected to internet.\n\n"
+                  "Cached pictograms: {cached}\n"
+                  "Cache size: {size} MB\n\n"
+                  "Preload popular pictograms for offline use?")
+                .format(
+                    cached=stats["cached_pictograms"],
+                    size=stats["total_size_mb"]
+                )
+            )
+            dialog.add_response("preload", _("Preload"))
+            dialog.set_response_appearance("preload", Adw.ResponseAppearance.SUGGESTED)
+        
+        dialog.add_response("close", _("Close"))
+        dialog.connect("response", self._on_offline_dialog_response)
+        dialog.present()
+    
+    def _on_offline_dialog_response(self, dialog, response):
+        """Handle offline dialog response."""
+        if response == "preload" and self.cache:
+            self._set_status(_("Preloading popular pictograms..."))
+            
+            def preload_callback(current, total, pictogram_id):
+                GLib.idle_add(
+                    self._set_status, 
+                    _("Preloading {current}/{total}: {id}").format(
+                        current=current, total=total, id=pictogram_id
+                    )
+                )
+                if current >= total:
+                    GLib.idle_add(self._set_status, _("Preloading complete"))
+            
+            self.cache.preload_popular_pictograms(preload_callback)
 
 
 CONFIG_DIR = Path(GLib.get_user_config_dir()) / "bildstod"

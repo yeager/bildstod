@@ -78,14 +78,38 @@ def _get_sv2en():
 
 
 def _api_search(keyword, lang="en"):
-    """Search ARASAAC API and return results."""
+    """Search ARASAAC API and return results. Uses offline cache when available."""
+    # Try offline cache first
+    try:
+        from bildstod.offline_cache import get_cache
+        cache = get_cache()
+        
+        # Check for cached results
+        cached_results = cache.get_cached_search(keyword, lang)
+        if cached_results is not None:
+            return cached_results
+        
+        # If offline, return empty results
+        if cache.is_online() is False:
+            return []
+    except ImportError:
+        pass
+    
+    # Make API call
     encoded = __import__('urllib.parse', fromlist=['quote']).quote(keyword)
     url = f"{API_BASE}/pictograms/{lang}/search/{encoded}"
     try:
-        req = Request(url, headers={"User-Agent": "Bildstod/0.3.0"})
+        req = Request(url, headers={"User-Agent": "Bildstod/0.4.8"})
         with urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read())
             if isinstance(data, list):
+                # Cache the results
+                try:
+                    from bildstod.offline_cache import get_cache
+                    cache = get_cache()
+                    cache.cache_search_results(keyword, data, lang)
+                except ImportError:
+                    pass
                 return data
     except Exception:
         pass
@@ -155,18 +179,49 @@ def get_image_url(pictogram_id, size=500):
 
 
 def download_image(pictogram_id, dest_dir=None, size=500):
+    """Download pictogram image with offline cache support."""
+    # Try offline cache first
+    try:
+        from bildstod.offline_cache import get_cache
+        cache = get_cache()
+        
+        cached_path = cache.get_cached_path(pictogram_id, size)
+        if cached_path:
+            return cached_path
+        
+        # If offline, return None
+        if cache.is_online() is False:
+            return None
+    except ImportError:
+        pass
+    
+    # Fallback to legacy behavior for backward compatibility
     if dest_dir is None:
         dest_dir = get_images_dir()
     dest = Path(dest_dir) / f"arasaac_{pictogram_id}.png"
     if dest.exists():
         return str(dest)
+    
+    # Download image
     url = get_image_url(pictogram_id, size)
     try:
-        req = Request(url, headers={"User-Agent": "Bildstod/0.3.0"})
+        req = Request(url, headers={"User-Agent": "Bildstod/0.4.8"})
         with urlopen(req, timeout=15) as resp:
+            image_data = resp.read()
+            
+            # Save to legacy location
             with open(dest, "wb") as f:
-                f.write(resp.read())
-        return str(dest)
+                f.write(image_data)
+            
+            # Also save to cache
+            try:
+                from bildstod.offline_cache import get_cache
+                cache = get_cache()
+                cache.cache_pictogram(pictogram_id, image_data, size)
+            except ImportError:
+                pass
+            
+            return str(dest)
     except Exception:
         return None
 
